@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+
+@import "variables";
+
+@import "base";
+
+@import "layout";
+
+@import "state";
+
+
+//------------HEADER---------------
+header {
+
+  background: $mainGray;
+  z-index: -1;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+.header-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  z-index: 10;
+  li{
+    position: relative;
+  }
+  nav li a, .btn {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  li:hover{
+    &::after{
+      content: '';
+      width: 20px;
+      height: 1.5px;
+      background: white;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+    }
+  }
+
+  .btn:hover{
+    background: darken($blue, 10%) ;
+    border-color: transparent;
+    box-shadow: 0 0 10px $blue;
+  }
+}
+.logo {
+
+  padding: 20px 80px;
+}
+
+
+.btn {
+  display: block;
+  padding: 10px 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+//-------------HEADING \ MAIN------------------
+.heading{
+
+  background: linear-gradient(to right, #18909b 50%, #55e955 100% );
+  text-align: center;
+  z-index: 1;
+
+  h1{
+    font-size: 110px;
+    letter-spacing: 1px;
+    color: white;
+    text-transform: uppercase;
+    padding: 240px 0;
+    font-weight: 400;
+    font-family: 'Actor', sans-serif;
+  }
+}
+.local-nav {
+
+  background: white;
+  filter: drop-shadow(0px 4px 12px #E5E5E5);
+  border-top: 5px solid #22BF95;
+  border-radius: 5px;
+  z-index: 10;
+  li:not(:last-child) a::after{
+    border: 1px solid #E5E5E5;
+    background: #E5E5E5;
+  }
+  a{
+    text-transform: uppercase;
+    color: #7F7F7F;
+    &:hover{
+      color: $blue;
+    }
+  }
+}
+.hamburger, .cross{
+  width: 40px;
+  height: 40px;
+}
+.hamburger{
+  background: url('../assets/hamburger.svg');
+}
+.cross{
+  background: url('../assets/cross.svg');
+}
+@import "accordion";
+@import "glossary";
+@import "slider";
+@import "faqs";
+@import "footer";
+
+
+@import "media-tablet";
+
+@import "media-mobile";

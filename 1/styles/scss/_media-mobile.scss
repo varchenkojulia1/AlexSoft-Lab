@@ -1,0 +1,158 @@
+@media screen and (max-width: 576px) {
+  .container{
+    max-width: 80vw;
+  }
+  .heading h1{
+    font-size: 40px;
+    padding: 140px 0;
+  }
+  .header-menu .active::after{
+    left: 45%;
+  }
+  .logo{
+    padding: 20px 30px;
+  }
+  .local-nav {
+    z-index: 0;
+    left: 13%;
+    li {
+      padding: 10px 25px;
+    }
+  }
+  .tips{
+    .header{
+      margin-top: 30px;
+      svg{
+        width: 160px;
+      }
+    }
+  }
+  .accordion{
+    margin-top: 20px;
+
+    .number{
+      padding: 0 10px;
+      position: relative;
+      top: 10px;
+    }
+    .accordion-item-header{
+      padding: 0 0 20px 0;
+      font-size: 16px;
+      align-items: flex-end;
+    }
+    .plus{
+      padding: 0;
+    }
+  }
+  .accordion-item.show{
+    .accordion-item-header{
+      font-size: 24px;
+    }
+    .accordion-item-content{
+      flex-direction: column;
+    }
+    .img-wrapper{
+      max-width: 160px;
+      margin: 0 auto;
+      img{
+        width: 100%;
+      }
+    }
+    .text-wrapper{
+      font-size: 14px;
+
+    }
+  }
+  .glossary{
+    margin-top: 40px;
+    .header{
+      svg{
+        width: 140px;
+      }
+    }
+    .wrapper{
+      margin-top: 10px;
+
+      .sim-slider{
+        min-height: 240px;
+
+      }
+    }
+    .description{
+      max-width: 80%;
+      margin: 0 auto;
+      h2{
+        font-size: 32px;
+        margin: 0 auto 40px 40px;
+      }
+      p{
+        max-width: 90%;
+        font-size: 16px;
+        &::before{
+          left: -20px;
+        }
+      }
+    }
+  }
+  .faqs{
+
+    .header{
+      svg{
+        width: 140px;
+      }
+    }
+    .letterQ,
+    .letterA{
+      font-size: 40px;
+      min-width: unset;
+      margin-right: 20px;
+    }
+    .question{
+      font-size: 16px;
+    }
+  }
+
+  footer{
+    .top{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      nav{
+        padding: 0;
+      }
+      .contacts-wrapper{
+          margin-top: 20px;
+        }
+      .contacts-line{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr;
+        p{
+          padding-left: 0;
+        }
+      }
+      .map{
+        text-align: left;
+      }
+      }
+    .bottom{
+      flex-direction: column;
+      justify-content: center;
+      .footer-logo{
+        width: 50%;
+        margin: 10px auto;
+        img{
+          width: 100%;
+        }
+      }
+      .social{
+        display: flex;
+        align-self: unset;
+        a{
+          display: block;
+          margin: 0 auto;
+
+        }
+      }
+    }
+    }
+
+}

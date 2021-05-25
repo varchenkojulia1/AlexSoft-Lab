@@ -1,0 +1,32 @@
+.header-menu .active{
+
+  position: relative;
+
+  &::after{
+    content: '';
+    width: 40px;
+    height: 1.5px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+  }
+}
+.local-nav {
+
+  li{
+
+    position: relative;
+  }
+  li:not(:last-child) a::after{
+
+    content: '';
+    height: 40px;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+
+  }
+
+}

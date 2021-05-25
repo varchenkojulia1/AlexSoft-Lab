@@ -1,0 +1,67 @@
+.container {
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container-fluid {
+
+  width: 100%;
+}
+.flex-grow-1{
+  flex-grow: 1;
+}
+
+header{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+nav {
+  padding: 20px 0;
+  li{
+    margin-right: 50px;
+    padding: 10px 0;
+    &:last-of-type{
+      margin-right: 20px;
+    }
+  }
+  .btn:first-of-type{
+    margin-right: 30px;
+  }
+}
+//----------  heading------------
+.local-nav{
+  position: sticky;
+  top: 80px;
+  left: 28%;
+  display: inline-block;
+  margin-top: -50px;
+  ul{
+    justify-content: center;
+  }
+  li{
+  padding: 26px 100px;
+  }
+}
+//--------TIPS--------
+
+.header{
+  margin-top: 100px;
+  svg{
+    margin-top: 15px;
+  }
+}
+
+.text-wrapper{
+  flex-direction: column;
+  justify-content: space-around;
+
+  img{
+    position: relative;
+    bottom: -10px;
+    padding-right: 10px;
+  }
+}

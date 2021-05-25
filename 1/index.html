@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task1</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="index.js" defer></script>
+
+
+</head>
+<body>
+    <header class="container-fluid "></header>
+<main>
+    <div class="header-menu container-fluid d-flex">
+        <div class="logo flex-grow-1 ">
+            <img src="assets/logo-header.svg" alt="logo">
+        </div>
+
+        <div class="flex-grow-1 ">
+
+            <div class="hamburger d-none d-md-block" id = 'hamburger'></div>
+
+            <nav class="d-flex  d-md-none" id="menuWrapper">
+
+                <ul class="d-flex " >
+                    <li>
+                        <a href="#">
+                            Why Skout
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Partners
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Company
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" >
+                            Tips & Tools
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex ">
+                    <a href="#" class="btn">
+                        Get Skout
+                    </a>
+                    <a href="#" class="btn">
+                        Log In
+                    </a>
+                </div>
+
+            </nav>
+
+        </div>
+    </div>
+    <section class="heading container-fluid">
+        <h1>
+            Tips & Tools
+        </h1>
+
+    </section>
+    <div class="local-nav">
+        <ul class="d-flex">
+            <li>
+                <a href="#tips" >
+                    tips
+                </a>
+            </li>
+            <li>
+                <a href="#glossary">
+                    glossary
+                </a>
+            </li>
+            <li>
+                <a href="#faqs">
+                    faqs
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--TIPS-->
+    <div class="tips container" id="tips">
+
+        <div class="header">
+            <hr>
+            <svg width="248" height="42" viewBox="0 0 248 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M191.892 32.4596H194.444V11.4036H191.892V32.4596ZM123.798 6.97659H133.506V32.4586H139.752V6.97659H149.46V1.14059H123.798V6.97659ZM162.827 3.72959H174.105V32.4596H176.835V3.72959H188.134V1.13359H162.827V3.72959ZM240.311 20.8236L237.625 20.5116C234.381 20.1306 232.837 19.0796 232.837 17.1096C232.837 14.7156 235.142 13.3066 238.431 13.3066C241.362 13.3066 244.159 14.4016 245.569 15.4086L246.664 13.4406C244.763 12.0756 241.742 11.0686 238.409 11.0686C233.553 11.0686 230.219 13.3956 230.219 17.2436C230.219 20.2416 232.278 22.3236 237.043 22.8606L239.751 23.1506C242.996 23.5096 244.607 24.6726 244.607 26.6416C244.607 29.2596 241.989 30.5796 238.185 30.5796C234.56 30.5796 232.323 29.4836 230.689 28.2086L229.503 30.1096C231.942 31.9896 235.097 32.7956 238.162 32.7956C243.577 32.7956 247.225 30.4906 247.225 26.4846C247.225 23.1506 244.719 21.3386 240.311 20.8236ZM193.168 1.98359C192.117 1.98359 191.355 2.78959 191.355 3.84059C191.355 4.89259 192.117 5.65359 193.168 5.65359C194.219 5.65359 195.002 4.89259 195.002 3.84059C195.002 2.78959 194.219 1.98359 193.168 1.98359ZM215.14 30.4006C210.396 30.4006 206.95 26.7766 206.95 21.9426C206.95 17.1096 210.396 13.4626 215.14 13.4626C219.95 13.4626 223.351 17.1986 223.351 21.9426C223.351 26.7096 219.973 30.4006 215.14 30.4006ZM215.43 11.0686C211.604 11.0686 208.807 12.8146 207.129 15.4086V11.4036H204.578V41.4096H207.129V28.4536C208.829 31.0726 211.604 32.7956 215.43 32.7956C221.338 32.7956 225.969 28.2086 225.969 21.9426C225.969 15.6786 221.338 11.0686 215.43 11.0686ZM57.565 1.14059H49.734L39.379 13.8256H36.427V1.14059H30.181V32.4586H36.427V19.5746H39.311L50.454 32.4586H58.553L44.432 16.4176L57.565 1.14059ZM114.409 19.6436C114.409 24.7646 111.476 27.0456 107.182 27.0456C102.887 27.0456 99.959 24.7646 99.959 19.6436V1.14059H93.695V19.9536C93.695 28.6116 99.22 33.0186 107.182 33.0186C115.15 33.0186 120.674 28.6116 120.674 19.9536V1.14059H114.409V19.6436ZM73.29 26.7356C67.801 26.7356 63.354 22.2886 63.354 16.7986C63.354 11.3156 67.801 6.86159 73.29 6.86159C78.774 6.86159 83.221 11.3156 83.221 16.7986C83.221 22.2886 78.774 26.7356 73.29 26.7356ZM73.29 0.558594C64.316 0.558594 57.044 7.83059 57.044 16.7986C57.044 25.7676 64.316 33.0386 73.29 33.0386C82.259 33.0386 89.531 25.7676 89.531 16.7986C89.531 7.83059 82.259 0.558594 73.29 0.558594ZM16.035 14.0496L14.27 13.7576C10.51 13.1546 7.806 12.4156 7.806 10.1346C7.806 7.75959 10.311 6.37359 13.797 6.37359C16.856 6.37359 19.553 7.28159 21.859 8.55559L25.631 3.93759C21.672 1.58859 18.074 0.600594 13.667 0.600594C6.998 0.600594 1.181 3.99959 1.181 10.5316C1.181 16.2186 5.208 18.6116 10.734 19.5066L12.722 19.8166C17.085 20.5316 19.372 21.3156 19.372 23.4906C19.372 25.9016 16.706 27.2696 13.219 27.2696C9.472 27.2696 6.073 25.9076 3.779 24.2926L0 28.9286C3.356 31.6326 8.428 33.0186 13.195 33.0186C19.932 33.0186 26.017 29.7056 26.017 22.8186C26.017 17.3806 21.654 14.9446 16.035 14.0496Z" fill="#B2B2B2"/>
+            </svg>
+        </div>
+
+        <div id="accordion" class="accordion container">
+            <div class="accordion-item">
+                <div class="accordion-item-header d-flex">
+                    <p>
+                        <span class="number">1</span> System Patching
+                    </p>
+                    <img src="assets/plus.svg" alt="plus" class="plus">
+                </div>
+
+                <div class="accordion-item-content">
+                    <div class="img-wrapper">
+                        <img src="assets/mediaPlaceholder.svg" alt="img">
+                    </div>
+                    <div class="text-wrapper d-flex">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                        </p>
+                        <p class="source">
+                            <img src="assets/info-sign.svg" alt="info">
+                            Based on the 2018 Verizon Data Breach Report
+                        </p>
+
+                </div>
+            </div>
+        </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header d-flex">
+                    <p>
+                        <span class="number">2</span>End-to-End Protection
+                    </p>
+
+                        <img src="assets/plus.svg" alt="plus" class="plus">
+
+                </div>
+                <div class="accordion-item-content ">
+                    <div class="img-wrapper">
+                        <img src="assets/mediaPlaceholder.svg" alt="img">
+                    </div>
+                    <div class="text-wrapper d-flex">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                        </p>
+                        <p class="source">
+                            <img src="assets/info-sign.svg" alt="info">
+                            Based on the 2018 Verizon Data Breach Report
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header d-flex">
+                    <p>
+                        <span class="number">3</span>Empowering Teams
+                    </p>
+
+                        <img src="assets/plus.svg" alt="plus" class="plus">
+
+                </div>
+                <div class="accordion-item-content ">
+                    <div class="img-wrapper">
+                        <img src="assets/mediaPlaceholder.svg" alt="img">
+                    </div>
+                    <div class="text-wrapper d-flex">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                        </p>
+                        <p class="source">
+                            <img src="assets/info-sign.svg" alt="info">
+                            Based on the 2018 Verizon Data Breach Report
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header d-flex">
+                    <p>
+                        <span class="number">4</span> Secure Credentials
+                    </p>
+
+                       <img src="assets/plus.svg" alt="plus" class="plus">
+
+                </div>
+                <div class="accordion-item-content">
+                    <div class="img-wrapper">
+                        <img src="assets/mediaPlaceholder.svg" alt="img">
+                    </div>
+                    <div class="text-wrapper d-flex">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa cupiditate debitis eos facilis illo inventore ipsam mollitia neque non quaerat, quam quasi quibusdam quis quod sint suscipit veritatis voluptate.
+                        </p>
+                        <p class="source">
+                            <img src="assets/info-sign.svg" alt="info">
+                            Based on the 2018 Verizon Data Breach Report
+                        </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- GLOSSARY-->
+    <div class="glossary container-fluid " id = 'glossary'>
+        <div class="header container">
+            <hr>
+            <svg width="343" height="42" viewBox="0 0 343 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M199.897 32.6306H202.448V0.409592H199.897V32.6306ZM219.26 30.5726C214.538 30.5726 210.936 27.0146 210.936 22.1146C210.936 17.2146 214.538 13.6346 219.26 13.6346C224.004 13.6346 227.606 17.2146 227.606 22.1146C227.606 27.0146 224.004 30.5726 219.26 30.5726ZM219.26 11.2406C213.017 11.2406 208.341 15.9166 208.341 22.1146C208.341 28.2906 213.017 32.9666 219.26 32.9666C225.503 32.9666 230.224 28.2906 230.224 22.1146C230.224 15.9166 225.503 11.2406 219.26 11.2406ZM266.076 20.9956L263.391 20.6826C260.146 20.3026 258.602 19.2496 258.602 17.2816C258.602 14.8876 260.907 13.4776 264.196 13.4776C267.127 13.4776 269.924 14.5746 271.334 15.5806L272.43 13.6126C270.528 12.2466 267.508 11.2406 264.174 11.2406C259.319 11.2406 255.985 13.5676 255.985 17.4156C255.985 20.4146 258.043 22.4946 262.809 23.0326L265.516 23.3236C268.761 23.6806 270.372 24.8446 270.372 26.8136C270.372 29.4316 267.754 30.7516 263.951 30.7516C260.325 30.7516 258.087 29.6556 256.454 28.3796L255.268 30.2826C257.707 32.1606 260.862 32.9666 263.928 32.9666C269.342 32.9666 272.99 30.6616 272.99 26.6566C272.99 23.3236 270.484 21.5106 266.076 20.9956ZM287.511 30.5726C282.722 30.5726 279.299 26.8806 279.299 22.1146C279.299 17.3706 282.678 13.6346 287.511 13.6346C292.277 13.6346 295.7 17.2816 295.7 22.1146C295.7 26.9476 292.277 30.5726 287.511 30.5726ZM295.566 15.6256C293.865 13.0076 291.068 11.2406 287.219 11.2406C281.313 11.2406 276.703 15.8486 276.703 22.1146C276.703 28.3796 281.313 32.9666 287.219 32.9666C291.068 32.9666 293.865 31.2436 295.566 28.5806V32.6306H298.094V11.5756H295.566V15.6256ZM339.284 11.5756L331.342 25.4266L322.862 11.5756H319.997L329.888 27.9326L321.832 41.6486H324.652L342.082 11.5756H339.284ZM307.379 15.1566V11.5756H304.873V32.6306H307.401V20.7496C307.401 16.5206 309.908 13.6566 313.42 13.6566C314.696 13.6566 316.105 13.9476 317.157 14.5076L317.805 12.0236C316.664 11.4646 315.389 11.2176 313.867 11.2176C311.071 11.2176 308.743 12.6726 307.379 15.1566ZM244.686 20.9956L242 20.6826C238.756 20.3026 237.212 19.2496 237.212 17.2816C237.212 14.8876 239.518 13.4776 242.807 13.4776C245.738 13.4776 248.534 14.5746 249.944 15.5806L251.041 13.6126C249.139 12.2466 246.117 11.2406 242.784 11.2406C237.928 11.2406 234.595 13.5676 234.595 17.4156C234.595 20.4146 236.654 22.4946 241.419 23.0326L244.126 23.3236C247.37 23.6806 248.982 24.8446 248.982 26.8136C248.982 29.4316 246.364 30.7516 242.561 30.7516C238.936 30.7516 236.698 29.6556 235.065 28.3796L233.879 30.2826C236.318 32.1606 239.472 32.9666 242.537 32.9666C247.952 32.9666 251.6 30.6616 251.6 26.6566C251.6 23.3236 249.094 21.5106 244.686 20.9956ZM57.565 1.31259H49.734L39.379 13.9976H36.427V1.31259H30.181V32.6306H36.427V19.7466H39.311L50.454 32.6306H58.553L44.432 16.5896L57.565 1.31259ZM73.29 26.9076C67.801 26.9076 63.354 22.4606 63.354 16.9706C63.354 11.4876 67.801 7.03359 73.29 7.03359C78.774 7.03359 83.221 11.4876 83.221 16.9706C83.221 22.4606 78.774 26.9076 73.29 26.9076ZM73.29 0.730592C64.316 0.730592 57.044 8.00259 57.044 16.9706C57.044 25.9396 64.316 33.2106 73.29 33.2106C82.259 33.2106 89.531 25.9396 89.531 16.9706C89.531 8.00259 82.259 0.730592 73.29 0.730592ZM16.035 14.2216L14.27 13.9296C10.51 13.3266 7.806 12.5866 7.806 10.3056C7.806 7.93159 10.311 6.54559 13.797 6.54559C16.856 6.54559 19.553 7.45359 21.859 8.72759L25.631 4.10959C21.672 1.76059 18.074 0.771592 13.667 0.771592C6.998 0.771592 1.181 4.17159 1.181 10.7036C1.181 16.3906 5.208 18.7836 10.734 19.6786L12.722 19.9896C17.085 20.7036 19.372 21.4876 19.372 23.6626C19.372 26.0746 16.706 27.4416 13.219 27.4416C9.472 27.4416 6.073 26.0796 3.779 24.4646L0 29.1006C3.356 31.8046 8.428 33.1906 13.195 33.1906C19.932 33.1906 26.017 29.8776 26.017 22.9916C26.017 17.5526 21.654 15.1166 16.035 14.2216ZM123.798 7.14959H133.506V32.6306H139.752V7.14959H149.46V1.31259H123.798V7.14959ZM114.409 19.8156C114.409 24.9366 111.476 27.2176 107.182 27.2176C102.887 27.2176 99.959 24.9366 99.959 19.8156V1.31259H93.695V20.1256C93.695 28.7836 99.22 33.1906 107.182 33.1906C115.15 33.1906 120.674 28.7836 120.674 20.1256V1.31259H114.409V19.8156ZM180.365 16.1176V18.6686H190.971C190.546 25.8286 186.026 30.3486 178.866 30.3486C171.594 30.3486 165.798 24.9556 165.798 16.9686C165.798 8.98059 171.572 3.58759 179 3.58759C183.139 3.58759 186.698 5.35559 189.114 8.24259L191.127 6.29559C188.241 2.96059 183.945 0.947592 179 0.947592C169.893 0.947592 162.957 7.54859 162.957 16.9686C162.957 26.9256 170.52 32.9666 178.866 32.9666C188.152 32.9666 193.969 26.0756 193.969 16.8566V16.5206C193.969 16.4086 193.947 16.2746 193.924 16.1176H180.365Z" fill="#B2B2B2"/>
+            </svg>
+        </div>
+
+        <div class="wrapper container-fluid d-flex">
+            <div class="sim-slider">
+                <ul class="sim-slider-list">
+
+
+                </ul>
+                <div class="sim-slider-arrow-left"></div>
+                <div class="sim-slider-arrow-right"></div>
+                <div class="sim-slider-dots"></div>
+            </div>
+
+            <div id = 'description' class="description  d-flex">
+                <h2>Domain</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing estiae, non officiis porro q vero, voluptatibus?
+                </p>
+            </div>
+        </div>
+    </div>
+<!-- FAQS -->
+    <div class="faqs container" id="faqs">
+        <div class="header">
+            <hr>
+            <svg width="273" height="33" viewBox="0 0 273 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M194.014 20.4665L201.062 3.5505L208.111 20.4665H194.014ZM199.428 0.8875L186.272 32.2135H189.114L192.916 23.0615H209.206L213.011 32.2135H215.942L202.785 0.8875H199.428ZM168.194 3.4835H186.764V0.8875H165.463V32.2135H168.194V17.7365H186.027V15.1405H168.194V3.4835ZM238.542 16.9085H235.276L242.973 26.5525C240.646 28.7005 237.492 29.9305 233.934 29.9305C226.504 29.9305 220.732 24.5385 220.732 16.5505C220.732 8.5625 226.504 3.1705 233.934 3.1705C241.34 3.1705 247.113 8.5625 247.113 16.5505C247.113 19.7055 246.218 22.4125 244.696 24.5605L238.542 16.9085ZM249.977 16.5505C249.977 7.1525 243.084 0.5295 233.934 0.5295C224.782 0.5295 217.891 7.1525 217.891 16.5505C217.891 25.9475 224.782 32.5705 233.934 32.5705C238.14 32.5705 241.899 31.1835 244.696 28.7005L247.56 32.2135H250.782L246.486 26.8205C248.724 24.1135 249.977 20.6005 249.977 16.5505ZM265.705 20.5775L263.02 20.2645C259.776 19.8845 258.232 18.8325 258.232 16.8625C258.232 14.4695 260.537 13.0595 263.827 13.0595C266.756 13.0595 269.555 14.1555 270.963 15.1635L272.061 13.1945C270.158 11.8285 267.137 10.8215 263.803 10.8215C258.948 10.8215 255.614 13.1495 255.614 16.9975C255.614 19.9965 257.673 22.0775 262.439 22.6135L265.145 22.9045C268.39 23.2625 270.001 24.4265 270.001 26.3955C270.001 29.0135 267.383 30.3335 263.58 30.3335C259.954 30.3335 257.717 29.2375 256.083 27.9615L254.898 29.8635C257.336 31.7435 260.492 32.5495 263.557 32.5495C268.972 32.5495 272.619 30.2435 272.619 26.2385C272.619 22.9045 270.114 21.0925 265.705 20.5775ZM123.798 6.7305H133.506V32.2125H139.752V6.7305H149.46V0.8945H123.798V6.7305ZM57.565 0.8945H49.734L39.379 13.5795H36.427V0.8945H30.181V32.2125H36.427V19.3285H39.311L50.454 32.2125H58.553L44.432 16.1715L57.565 0.8945ZM16.035 13.8035L14.27 13.5115C10.51 12.9085 7.806 12.1685 7.806 9.8875C7.806 7.5135 10.311 6.1275 13.797 6.1275C16.856 6.1275 19.553 7.0345 21.859 8.3095L25.631 3.6915C21.672 1.3415 18.074 0.3535 13.667 0.3535C6.998 0.3535 1.181 3.7535 1.181 10.2855C1.181 15.9725 5.208 18.3655 10.734 19.2605L12.722 19.5705C17.085 20.2855 19.372 21.0695 19.372 23.2445C19.372 25.6555 16.706 27.0235 13.219 27.0235C9.472 27.0235 6.073 25.6615 3.779 24.0465L0 28.6825C3.356 31.3865 8.428 32.7725 13.195 32.7725C19.932 32.7725 26.017 29.4595 26.017 22.5725C26.017 17.1345 21.654 14.6985 16.035 13.8035ZM73.29 26.4895C67.801 26.4895 63.354 22.0425 63.354 16.5525C63.354 11.0695 67.801 6.6155 73.29 6.6155C78.774 6.6155 83.221 11.0695 83.221 16.5525C83.221 22.0425 78.774 26.4895 73.29 26.4895ZM73.29 0.3125C64.316 0.3125 57.044 7.5845 57.044 16.5525C57.044 25.5215 64.316 32.7925 73.29 32.7925C82.259 32.7925 89.531 25.5215 89.531 16.5525C89.531 7.5845 82.259 0.3125 73.29 0.3125ZM114.41 19.3975C114.41 24.5185 111.476 26.7995 107.182 26.7995C102.887 26.7995 99.959 24.5185 99.959 19.3975V0.8945H93.695V19.7075C93.695 28.3655 99.22 32.7725 107.182 32.7725C115.15 32.7725 120.674 28.3655 120.674 19.7075V0.8945H114.41V19.3975Z" fill="#B2B2B2"/>
+            </svg>
+        </div>
+        <div class="container">
+            <ul>
+                <li class="" id="q1">
+                    <div class="question-box d-flex">
+                        <div class="letterQ flex-grow-1">
+                            Q
+                        </div>
+                        <p class="question">
+                            What are your system requirements?
+                        </p>
+
+<!--                        <img src="assets/arrow-bottom.svg" class="arrow d-block" alt="arrow">-->
+                        <div class="arrow arrow-down"></div>
+                    </div>
+                    <div class="answer-box d-none d-flex">
+                        <div class="letterA flex-grow-1">A</div>
+                        <p class="answer"></p>
+                    </div>
+                </li>
+                <li class="" id="q2">
+                    <div class="question-box d-flex">
+                        <div class="letterQ flex-grow-1">
+                            Q
+                        </div>
+                        <p class="question">
+                            What are your system requirements?
+                        </p>
+
+                        <div class="arrow arrow-down"></div>
+                    </div>
+                    <div class="answer-box d-none d-flex">
+                        <div class="letterA flex-grow-1">A</div>
+                        <p class="answer"></p>
+                    </div>
+                </li>
+                <li class="" id="q3">
+                    <div class="question-box d-flex">
+                        <div class="letterQ flex-grow-1">
+                            Q
+                        </div>
+                        <p class="question">
+                            Do I need an MSP or Technology provider to get SKOUT?
+                        </p>
+                        <div class="arrow arrow-down"></div>
+                    </div>
+                    <div class="answer-box d-none d-flex">
+                        <div class="letterA flex-grow-1">A</div>
+                        <p class="answer"></p>
+                    </div>
+                </li>
+                <li class="" id="q4">
+                    <div class="question-box d-flex">
+                        <div class="letterQ flex-grow-1">
+                            Q
+                        </div>
+                        <p class="question">
+                            Is there a trial program?
+                        </p>
+
+                        <div class="arrow arrow-down"></div>
+                    </div>
+                    <div class="answer-box d-none d-flex">
+                        <div class="letterA flex-grow-1 ">A</div>
+                        <p class="answer"></p>
+                    </div>
+                </li>
+                <li class="" id="q5">
+                    <div class="question-box d-flex">
+                        <div class="letterQ flex-grow-1">
+                            Q
+                        </div>
+                        <p class="question">
+                            Can I get a Demo?
+                        </p>
+
+                        <div class="arrow arrow-down"></div>
+                    </div>
+                    <div class="answer-box d-none d-flex">
+                        <div class="letterA">A</div>
+                        <p class="answer"></p>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn">
+                <a href="#">
+                    MORE QUESTIONS
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="container-fluid">
+    <div class="top container ">
+        <nav class="flex-grow-1">
+            <ul>
+                <li>
+                    <a href="#">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Company
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Careers
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Call the SOC
+                    </a>
+                </li>
+            </ul>
+            <p class="phone">
+                <a href="tel:+18558384500">
+                    1-855-838-4500
+                </a>
+            </p>
+        </nav>
+
+        <div class="">
+            <ul class="contacts-wrapper">
+                <li class="contacts-line">
+                    <p>
+                        New York
+                    </p>
+                    <p>
+                        <a href="tel:+16312036600">
+                            +1 631-203-6600
+                        </a>
+                    </p>
+                    <p>
+                        423 W 55th St. 7th Floor
+                        New York, NY, 10019
+                    </p>
+                    <p class="map">
+                        <a href="#">
+                            View Map
+                        </a>
+                    </p>
+                </li>
+                <li class="contacts-line">
+                    <p>
+                        Corporate Headquarters
+                    </p>
+                    <p>
+                        <a href="tel:+16312036600">
+                            +1 631-203-6600
+                        </a>
+
+                    </p>
+                    <p>
+                        270 S. Service Road, Suite 55
+                        Melville, NY, 11747
+                    </p>
+                    <p class="map">
+                        <a href="#">
+                            View Map
+                        </a>
+                    </p>
+                </li>
+                <li class="contacts-line">
+                    <p>
+                        EMEA
+                    </p>
+                    <p>
+                        <a href="tel:+35316600800">
+                            +353-1-6600800
+                        </a>
+
+                    </p>
+                    <p>
+                        IDA Business and Technology Park, Mountrath Road, Unit 2
+                        Portlaoise, Ireland
+                    </p>
+                    <p class="map">
+                        <a href="#">
+                            View Map
+                        </a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <hr class="container">
+    <div class="bottom container d-flex">
+
+        <div class="social">
+            <a href="#">
+                <img src="assets/tweeter.svg" alt="tweeter">
+            </a>
+            <a href="#">
+                <img src="assets/facebook.svg" alt="facebook">
+            </a>
+            <a href="#">
+                <img src="assets/youtube.svg" alt="youtube">
+            </a>
+            <a href="#">
+                <img src="assets/linkedIn.svg" alt="linkedIn">
+            </a>
+        </div>
+        <div class="footer-logo">
+            <img src="assets/footer-logo.svg" alt="logo">
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
