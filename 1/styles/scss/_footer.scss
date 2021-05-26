@@ -1,44 +1,48 @@
 footer{
-  background: #F2F2F2;
+  background: $footerBG;
 
   ul{
     margin-top: 60px;
+
+    li{
+      color: $mainColor;
+    }
+
     li:hover a{
-      color: $blue;
+      color: $accent;
     }
   }
   .phone{
 
     position: relative;
-    &:hover::after{
 
+    &:hover::after{
       content: '';
       width: 100px;
       height: 1.5px;
-      background: $blue;
+      background: $accent;
       position: absolute;
       bottom: 0;
       left: 0;
-
     }
     &:hover a{
-      color: $blue;
+      color: $accent;
     }
   }
 
   a , p{
-    color: $mainGray;
+    color: $mainColor;
   }
   .contacts-line{
     display: grid;
     grid-template-rows: min(100px);
     grid-template-columns: repeat(4, 1fr);
     text-wrap: normal;
-    border-top: 1px solid $blue;
+    border-top: 1px solid $accent;
 
     &:hover{
       p{
-        color: $blue;
+        color: $accent;
       }
     }
     p{
@@ -53,10 +57,10 @@ footer{
   .map{
     text-align: right;
     &:hover a{
-      color: $mainGray;
+      color: $mainColor;
     }
     a{
-      color: $blue;
+      color: $accent;
     }
   }
 .bottom{

@@ -12,9 +12,9 @@
   .logo{
     padding: 20px 30px;
   }
-  .local-nav {
-    z-index: 0;
-    left: 13%;
+  .main-page-nav-bar {
+    z-index: 1;
+    left: calc(50% - 140px);
     li {
       padding: 10px 25px;
     }
@@ -28,25 +28,27 @@
     }
   }
   .accordion{
-    margin-top: 20px;
+    padding-top: 20px;
 
-    .number{
-      padding: 0 10px;
-      position: relative;
-      top: 10px;
-    }
-    .accordion-item-header{
+    &-item-header{
       padding: 0 0 20px 0;
       font-size: 16px;
       align-items: flex-end;
+      .number{
+        padding: 0 10px;
+        position: relative;
+        top: 10px;
+      }
     }
     .plus{
       padding: 0;
     }
-  }
-  .accordion-item.show{
+
+  &-item.show{
     .accordion-item-header{
       font-size: 24px;
+      display: grid;
+      grid-template-columns: auto 50px;
     }
     .accordion-item-content{
       flex-direction: column;
@@ -62,9 +64,16 @@
       font-size: 14px;
 
     }
+    .minus{
+      position: relative;
+      left: -10px;
+      margin: auto;
+    }
   }
+}
   .glossary{
     margin-top: 40px;
+    margin-bottom: 20px;
     .header{
       svg{
         width: 140px;
@@ -74,8 +83,8 @@
       margin-top: 10px;
 
       .sim-slider{
-        min-height: 240px;
-
+        min-height: 230px;
+        padding-bottom: 20px;
       }
     }
     .description{
@@ -95,29 +104,52 @@
     }
   }
   .faqs{
-
+    padding-top: 50px;
     .header{
       svg{
         width: 140px;
       }
     }
-    .letterQ,
-    .letterA{
+    .letter-big {
       font-size: 40px;
       min-width: unset;
       margin-right: 20px;
     }
+
     .question{
       font-size: 16px;
+    }
+
+    .answer-box{
+      margin: 10px;
+      font-size: 14px;
+      grid-template-columns: 70px auto;
+    }
+
+    .question-box{
+      grid-template-columns: 70px auto 20px;
+    }
+
+    .arrow{
+      width: 20px;
     }
   }
 
   footer{
+    .container.top{
+      width: 100%;
+      margin: 0;
+    }
     .top{
-      grid-template-columns: 1fr;
+      grid-template-columns: auto;
       grid-template-rows: repeat(2, auto);
       nav{
-        padding: 0;
+        padding: 0 0 0 10px;
+        text-align: left;
+        width: 100vw;
+        li{
+          padding-left: 20px;
+        }
       }
       .contacts-wrapper{
           margin-top: 20px;
@@ -126,7 +158,7 @@
         grid-template-rows: repeat(4, auto);
         grid-template-columns: 1fr;
         p{
-          padding-left: 0;
+          padding-left: 20px;
         }
       }
       .map{
@@ -153,6 +185,5 @@
         }
       }
     }
-    }
-
+  }
 }

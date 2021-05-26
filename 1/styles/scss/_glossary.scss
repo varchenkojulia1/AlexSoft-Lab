@@ -2,7 +2,7 @@
   margin-top: 150px;
 
   .wrapper{
-    background: linear-gradient(to top right, #e0cccc 10%, white 100%);
+    background: linear-gradient(to top right, $lightMain 10%, white 100%);
     margin-top: 40px;
     position: relative;
     padding-bottom: 40px;
@@ -36,7 +36,7 @@
       position: absolute;
       width: 1px;
       height: 72px;
-      background: #22BF95;
+      background: $accent;
       left: -30px;
     }
   }

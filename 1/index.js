@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 //-------------------ACCORDION-----------------
 let accordionItems = document.querySelectorAll('.accordion-item-header');
 
@@ -6,34 +6,31 @@ const accordionToggle = (e) => {
 
 
     const container = e.target.parentElement.parentElement;
-    const plus = container.querySelector('.plus');
+    const plus = container.querySelector('.small-wrapper');
     const number = container.querySelector('.number')
 
     accordionItems.forEach(item => {
-        let p = item.querySelector('.plus');
-        let n = item.querySelector('.number');
+        let itemPlus = item.querySelector('.small-wrapper');
+        let itemNumber = item.querySelector('.number');
 
         if(item.parentElement === container && container.className.indexOf('show') === -1) {
 
             container.classList.add('show');
-            plus.removeAttribute('src');
-            plus.setAttribute('src', './assets/minus.svg');
+            plus.classList.toggle('plus');
+            plus.classList.toggle('minus')
             number.classList.add('hide');
-
-        } else if (item.parentElement !== container && item.parentElement.className.indexOf('show') !== -1){
-
-            item.parentElement.classList.remove('show');
-            p.removeAttribute('src')
-            p.setAttribute('src', './assets/plus.svg');
-            n.classList.remove('hide')
 
         } else {
 
             item.parentElement.classList.remove('show');
-            p.removeAttribute('src');
-            p.setAttribute('src', './assets/plus.svg');
 
-            n.classList.remove('hide');
+            if (itemPlus.classList.contains('minus')){
+
+                itemPlus.classList.toggle('plus');
+                itemPlus.classList.toggle('minus')
+            }
+
+            itemNumber.classList.remove('hide');
         }
         })
 }
@@ -44,65 +41,57 @@ accordionItems.forEach(item => {
 })
 
 //-----------------------slider-------------------
-const glossaryItems = {
-    'Botnet': 'Lorem ipsum dolor sit amet, consecteolestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Breach':'Lorem ipsum dolor sit amet, consectetur adipiisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Cloud':'Lorem ipsum dolor sit amet, consecteae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'DDoS':'Lorem ipsum dolor sit amet, consectetur adiestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Domain':'Lorem ipsum dolor sit amet, consectetur adipisicing estiae, non officiis porro q vero, voluptatibus?',
-    'Endpoint':'Lorem ipsum dolor sit amet, consectetur adipise, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Exploit':'Lorem ipsum dolor sit amet, es minus molestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Firewall':'Lorem ipsum dolor sit amet, consectetur adistiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'IP Address':'Lorem ipsum dolor sit inus molestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Malware':'Lorem ipsum dolor sit amet,molestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Penetration Test':'Lorem ipsum dolor sit amet, consectetur adi molestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Phishing/Spearphishing':'Lorem ips inventore itaque maiores minus molestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Ransomware':'Lorem ipsum dolor sit amet, maiores minus molestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Session Hijacking':'Lorem ipsum dolor sit  maiores minus molestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Social Engineering':'Lorem ipsum dolor si itaque maiores minus molestiae, non officiis porro quisquam ratione sunt tenetur ut vero, voluptatibus?',
-    'Software':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus amet aspernatur dolore expedita ',
-    'SOC':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus amet aspernatur dolore expedita ',
-    'Trojan Horse':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus amet aspernatur dolore expedita ',
-    'VPN':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus amet aspernatur dolore expedita ',
-    'Virus':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus amet aspernatur dolore expedita ',
-    'Worm':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus amet aspernatur dolore expedita '
-}
+    let glossaryItems = [];
 
-const glossaryKeys = Object.keys(glossaryItems);
-const glossaryValues = Object.values(glossaryItems);
-let pageLimit = 14;
+const getGlossaryItems = (data) => {
 
-if(window.innerWidth < 1024 && window.innerWidth > 577) {
-    pageLimit = 10
-} else if (window.innerWidth < 576) {
-    pageLimit = 5
-}
-let numberOfPages = Math.ceil(glossaryKeys.length / pageLimit);
-let drowen = 0;
+    glossaryItems = data;
 
-while(numberOfPages > 0) {
+    const glossaryKeys = Object.keys(glossaryItems);
+    const glossaryValues = Object.values(glossaryItems);
+    let pageLimit = 14;
 
-    const list = document.createElement('li');
-    list.setAttribute('class', 'sim-slider-element');
-    let page = glossaryKeys.slice(drowen, drowen + pageLimit);
-    let inner = page.map((elem, index) => `<li id =${drowen + index} >${elem}</li>`)
-    list.innerHTML = inner.join('');
-    document.querySelector('.sim-slider-list').append(list);
-    drowen += pageLimit;
-    numberOfPages--;
-}
-document.getElementById('4').classList.add('active')
+    if(window.innerWidth < 1024 && window.innerWidth > 577) { // breakpoints for tablet
+        pageLimit = 10
+    } else if (window.innerWidth < 576) {  // breakpoints for mobile
+        pageLimit = 5
+    }
+    let numberOfPages = Math.ceil(glossaryKeys.length / pageLimit);
+    let drawn = 0;
+
+    while(numberOfPages > 0) {
+
+        const list = document.createElement('li');
+        list.setAttribute('class', 'sim-slider-element')
+
+        let page = glossaryKeys.slice(drawn, drawn + pageLimit);
+        let inner = page.map((elem, index) => `<li id =${drawn + index} >${elem}</li>`)
+        list.innerHTML = inner.join('');
+        document.querySelector('.sim-slider-list').append(list);
+        drawn += pageLimit;
+        numberOfPages--;
+    }
+
+    document.getElementById('4').classList.add('active');
+
+    document.querySelectorAll('.sim-slider-element').forEach(element =>{
+        element.addEventListener('click', listToggle )
+    })
+    new Sim();
+
+};
+
+ fetch('./glossaryItems.json')
+    .then(response => response.json())
+    .then(data => getGlossaryItems(data))
+
 
     //---------------------------SLIDER--------------------------
     function Sim(sldrId) {
 
         let id = document.getElementById(sldrId);
-        if(id) {
-            this.sldrRoot = id
-        }
-        else {
-            this.sldrRoot = document.querySelector('.sim-slider')
-        };
+
+        this.sldrRoot = id ? id: document.querySelector('.sim-slider');
 
         // Carousel objects
         this.sldrList = this.sldrRoot.querySelector('.sim-slider-list');
@@ -120,9 +109,9 @@ document.getElementById('4').classList.add('active')
     Sim.defaults = {
 
         // Default options for the carousel
-        // loop: true,     // Бесконечное зацикливание слайдера
-        // auto: true,     // Автоматическое пролистывание
-        arrows: true,   // Пролистывание стрелками
+        // loop: true,     // Infinite loop slider
+        // auto: true,     // Automatic scrolling
+        arrows: true,   // Scroll with arrows
     };
 
     Sim.prototype.elemPrev = function(num) {
@@ -134,14 +123,13 @@ document.getElementById('4').classList.add('active')
 
         if(!this.options.loop) {
             if(this.currentElement == 0) {
-                // this.leftArrow.style.display = 'none'
-                this.leftArrow.style.opacity = '0.5'
+
+                this.leftArrow.style.opacity = '0.7'
             };
             this.rightArrow.style.display = 'block'
         };
 
-        // this.sldrElements[this.currentElement].style.opacity = '1';
-        // this.sldrElements[prevElement].style.opacity = '0';
+
         this.sldrElements[this.currentElement].style.display = 'block';
         this.sldrElements[prevElement].style.display = 'none';
 
@@ -159,14 +147,12 @@ document.getElementById('4').classList.add('active')
 
         if(!this.options.loop) {
             if(this.currentElement == this.elemCount-1) {
-                // this.rightArrow.style.display = 'none'
-                this.rightArrow.style.opacity = '0.5'
+
+                this.rightArrow.style.opacity = '0.7'
             };
             this.leftArrow.style.display = 'block'
         };
 
-        // this.sldrElements[this.currentElement].style.opacity = '1';
-        // this.sldrElements[prevElement].style.opacity = '0';
         this.sldrElements[this.currentElement].style.display = 'block';
         this.sldrElements[prevElement].style.display = 'none';
 
@@ -206,28 +192,28 @@ document.getElementById('4').classList.add('active')
         };
 
         // Start initialization
-        if(that.elemCount <= 1) {   // Отключить навигацию
+        if(that.elemCount <= 1) {   // disable navigation
             that.options.auto = false; that.options.arrows = false; that.options.dots = false;
             that.leftArrow.style.display = 'none'; that.rightArrow.style.display = 'none'
         };
-        if(that.elemCount >= 1) {   // показать первый элемент
-            // that.sldrElemFirst.style.opacity = '1';
+        if(that.elemCount >= 1) {   // show first element
+
             that.sldrElemFirst.style.display = 'block';
         };
 
         if(!that.options.loop) {
-            // that.leftArrow.style.display = 'none';  // отключить левую стрелку
-            that.leftArrow.style.opacity = '0.5';  // отключить левую стрелку
-            that.options.auto = false; // отключить автопркрутку
+            that.leftArrow.style.display = 'none';  // disable left arrow
+            that.leftArrow.style.opacity = '0.5';  // disable left arrow
+            that.options.auto = false; // disable auto autoscroll
         }
-        else if(that.options.auto) {   // инициализация автопрокруки
+        else if(that.options.auto) {   // autoscroll initialization
             setAutoScroll();
-            // Остановка прокрутки при наведении мыши на элемент
+            // Stop scrolling when hovering over an element
             that.sldrList.addEventListener('mouseenter', function() {clearInterval(that.autoScroll)}, false);
             that.sldrList.addEventListener('mouseleave', setAutoScroll, false)
         };
 
-        if(that.options.arrows) {  // инициализация стрелок
+        if(that.options.arrows) {  // arrows initialization
             that.leftArrow.addEventListener('click', function() {
                 let fnTime = getTime();
                 if(fnTime - bgTime > 1000) {
@@ -245,14 +231,14 @@ document.getElementById('4').classList.add('active')
             that.leftArrow.style.display = 'none'; that.rightArrow.style.display = 'none'
         };
 
-        if(that.options.dots) {  // инициализация индикаторных точек
+        if(that.options.dots) {  // initialization dots indicators
             let sum = '', diffNum;
             for(let i=0; i<that.elemCount; i++) {
                 sum += '<span class="sim-dot"></span>'
             };
             that.indicatorDots.innerHTML = sum;
             that.indicatorDotsAll = that.sldrRoot.querySelectorAll('span.sim-dot');
-            // Назначаем точкам обработчик события 'click'
+            // Assigning the 'click' eventListener to the dots
             for(let n=0; n<that.elemCount; n++) {
                 that.indicatorDotsAll[n].addEventListener('click', function() {
                     diffNum = Math.abs(n - that.currentElement);
@@ -262,26 +248,29 @@ document.getElementById('4').classList.add('active')
                     else if(n > that.currentElement) {
                         bgTime = getTime(); that.elemNext(diffNum)
                     }
-                    // Если n == that.currentElement ничего не делаем
+                    // if n == that.currentElement nothing happens
                 }, false)
             };
-            that.dotOff(0);  // точка[0] выключена, остальные включены
+            that.dotOff(0);  // dot[0] is on, rest - off
             for(let i=1; i<that.elemCount; i++) {
                 that.dotOn(i)
             }
         }
     };
 
-    new Sim();
+
 
     //----------------------------------- END SLIDER----------------------------------
 
     //------------------------carousel toggle---------------------
 
-const glossaryToggle = (e) => {
+const listToggle = (e) => {
 
     const id = e.target.id;
+    const glossaryKeys = Object.keys(glossaryItems);
+    const glossaryValues = Object.values(glossaryItems)
 
+    console.log('click')
     if(e.target.parentElement.className === 'sim-slider-element') {
 
         document.querySelector('.description > h2').innerHTML = glossaryKeys[id];
@@ -295,48 +284,103 @@ const glossaryToggle = (e) => {
     }
 }
 
-    document.querySelectorAll('.sim-slider-element').forEach(element =>{
-        element.addEventListener('click', glossaryToggle )
-    })
+
 //----------------------------FAQS------------------------------------
+fetch('./questionsAnswers.json')
+    .then(response => response.json())
+    .then(data => getQuestionAnswers(data) )
+    .catch(err => console.log(err))
 
-    const questionsAnswers = {
-        'What are your system requirements?': 'Everyone needs cybersecurity. Some information requires more protection than other information, but our solution is adaptable to every business. ',
-        'Is SKOUT windows and Mac compatible?':'Everyone needs cybersecurity. Some information requires more protection than other information, but our solution is adaptable to every business. ',
-        'Do I need an MSP or Technology provider to get SKOUT?':'Everyone needs cybersecurity. Some information requires more protection than other information, but our solution is adaptable to every business. ',
-        'Is there a trial program? ':'Everyone needs cybersecurity. Some information requires more protection than other information, but our solution is adaptable to every business. ',
-        'Can I get a Demo?':'Everyone needs cybersecurity. Some information requires more protection than other information, but our solution is adaptable to every business. '
-    }
-const showAnswerToggler = e => {
 
-    const id = e.target.parentElement.parentElement.id;
-    const parent = e.target.parentElement.parentElement;
-    const number = +id.slice(1, id.length);
-    let answers = Object.values(questionsAnswers);
-    parent.querySelector('.answer').innerHTML = answers[number];
-    parent.querySelector('.answer-box').classList.toggle('d-none');
+    const getQuestionAnswers = (questionsAnswers) =>{
 
-    if( parent.querySelector('.arrow').classList.contains('arrow-down')){
-        parent.querySelector('.arrow').classList.remove('arrow-down');
-        parent.querySelector('.arrow').classList.add('arrow-up');
-    } else {
-        parent.querySelector('.arrow').classList.remove('arrow-up');
-        parent.querySelector('.arrow').classList.add('arrow-down');
-    }
+        const showAnswerToggler = e => {
 
-}
-    document.querySelectorAll('.question-box').forEach(elem => {
-        elem.addEventListener('click', showAnswerToggler)
-    })
-})
-// -------------------------- hamburger -----------------
+            const id = e.target.parentElement.parentElement.id;
+            const parent = e.target.parentElement.parentElement;
+            const number = +id.slice(1, id.length);
+            let answers = Object.values(questionsAnswers);
+            parent.querySelector('.answer').innerHTML = answers[number];
+            parent.querySelector('.answer-box').classList.toggle('d-none');
 
-const showMenu = (e) => {
+            if( parent.querySelector('.arrow').classList.contains('arrow-down')){
+                parent.querySelector('.arrow').classList.remove('arrow-down');
+                parent.querySelector('.arrow').classList.add('arrow-up');
+            } else {
+                parent.querySelector('.arrow').classList.remove('arrow-up');
+                parent.querySelector('.arrow').classList.add('arrow-down');
+            }
 
-    document.getElementById('menuWrapper').classList.toggle('d-md-none');
-    document.getElementById('hamburger').classList.toggle('cross');
-    document.getElementById('hamburger').classList.toggle('hamburger');
+        }
+        document.querySelectorAll('.question-box').forEach(elem => {
+            elem.addEventListener('click', showAnswerToggler)
+        })
 
 }
 
-document.getElementById('hamburger').addEventListener('click', showMenu)
+
+
+    // -------------------------- hamburger -----------------
+
+    const showMenu = (e) => {
+
+        document.getElementById('menuWrapper').classList.toggle('d-md-none');
+        document.getElementById('hamburger').classList.toggle('cross');
+        document.getElementById('hamburger').classList.toggle('hamburger');
+
+    }
+
+    document.getElementById('hamburger').addEventListener('click', showMenu)
+
+const scrollFunc = (e) => {
+
+    const headerMenu = document.querySelector('.header-menu');
+
+    let coordinates = 600;
+    if(window.innerWidth < 1024 && window.innerWidth > 577) { // breakpoints for tablet
+        coordinates = 400
+    } else if (window.innerWidth < 576) {  // breakpoints for mobile
+        coordinates = 300
+    }
+
+    if (+window.pageYOffset > coordinates ){
+
+        headerMenu.classList.add('gray-header')
+
+    } else if ((window.pageYOffset < coordinates) && (headerMenu.classList.contains('header-menu'))){
+
+        headerMenu.classList.remove('gray-header')
+    }
+
+    const menuItems = document.querySelectorAll('.main-page-nav-bar a')
+
+    if ((window.pageYOffset > coordinates) && (window.pageYOffset <= coordinates*2.2)) {
+
+        menuItems.forEach(item =>{
+            item.classList.contains('active') ? item.classList.remove('active'): null;
+        })
+        menuItems[0].classList.add('active')
+
+    } else if ((window.pageYOffset > coordinates*2.2) && (window.pageYOffset <= coordinates*4)){
+
+        menuItems.forEach(item =>{
+            item.classList.contains('active') ? item.classList.remove('active'): null;
+        })
+        menuItems[1].classList.add('active')
+
+    } else if ((window.pageYOffset > coordinates*4) && (window.pageYOffset <= coordinates*6)){
+
+        menuItems.forEach(item =>{
+            item.classList.contains('active') ? item.classList.remove('active'): null;
+        })
+        menuItems[2].classList.add('active')
+
+    } else if (window.pageYOffset <= coordinates){
+
+        menuItems.forEach(item =>{
+            item.classList.contains('active') ? item.classList.remove('active'): null;
+        })
+
+    }
+}
+document.addEventListener('scroll', scrollFunc)

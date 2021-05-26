@@ -1,5 +1,12 @@
 .faqs{
 
+  padding-top: 150px;
+
+  .question-box {
+    display: grid;
+    grid-template-columns: 200px auto 50px ;
+    grid-template-rows: auto;
+  }
   .container{
     margin-top: 30px;
   }
@@ -14,38 +21,55 @@
     flex-grow: 3;
     font-family: 'Aclonica', sans-serif;
     font-size: 24px;
+
     &:hover{
-      color: $blue;
+      color: $accent;
     }
   }
-  .letterQ, .letterA{
+  .letter-big {
     font-size: 110px;
     font-family: 'Actor', sans-serif;
-    color: $lightGray;
-    min-width: 230px;
-
+    color: $lightMain;
+    text-transform: uppercase;
   }
   .arrow, .question{
+
     cursor: pointer;
+    margin: auto 0;
   }
 
   .answer{
     flex-grow: 3;
     font-size: 16px;
   }
-  .btn{
+  .btn-container{
     text-align: center;
     margin: 40px;
-    a{
-      color: $blue;
+
+    .btn{
+      color: $accent;
       font-size: 12px;
       display: block;
+      text-transform: uppercase;
     }
+
     &:hover a{
       border-radius: 10px;
-      text-shadow: 0 0 15px $lightGray;
-      color: $mainGray;
+      text-shadow: 0 0 15px $lightMain;
+      color: $mainColor;
       transform: scale(1.7);
+    }
+  }
+  .answer-box{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 200px auto;
+    &.d-none{
+      display: none;
+    }
+
+    p{
+      margin: auto 0;
     }
   }
   .arrow{
@@ -55,8 +79,8 @@
       background: url("../assets/arrow-top.svg") no-repeat center;
     }
     &-down{
-      background: url("../assets/arrow-bottom.svg") no-repeat center;
+      background: url("../assets/arrow-top.svg") no-repeat center;
+      transform: rotate(180deg);
     }
   }
-
 }

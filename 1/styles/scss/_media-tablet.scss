@@ -1,7 +1,4 @@
 @media screen and (max-width: 992px) {
-  .local-nav{
-    left: 4%;
-  }
   .d-md-block{
     display: block;
   }
@@ -14,9 +11,11 @@
     align-items: center;
     margin-right: 40px;
   }
+
   .accordion-item-content .source{
     margin: 20px 0;
   }
+
   .header-menu{
     z-index: 5;
     ul{
@@ -24,7 +23,7 @@
       position: absolute;
     }
     .active::after{
-      background: $blue;
+      background: $accent;
       left: 48%;
     }
     nav{
@@ -45,7 +44,7 @@
           text-align: center;
           margin: 0;
           a {
-            color: $blue;
+            color: $accent;
           }
         }
       }
@@ -54,8 +53,8 @@
         justify-content: center;
         align-items: center;
         .btn{
-          color: $blue;
-          border: 1px solid $blue;
+          color: $accent;
+          border: 1px solid $accent;
           &:first-of-type{
             margin: 20px 0;
           }
@@ -107,7 +106,6 @@
         }
       }
     }
-
   }
 }
 

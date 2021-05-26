@@ -1,13 +1,11 @@
 *{
   box-sizing: border-box;
   font-family: Acme, sans-serif;
-  //box-sizing: border-box;
   scroll-behavior: smooth;
 }
 body, p ,h1, ul{
   margin: 0;
   padding: 0;
-
 }
 ul li {
   list-style: none;
@@ -22,7 +20,5 @@ a{
 .d-block{
   display: block;
 }
-.d-none{
-  display: none;
-}
+
 
