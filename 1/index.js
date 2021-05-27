@@ -48,21 +48,23 @@ const getGlossaryItems = (data) => {
     glossaryItems = data;
 
     drawInnerSlider()
-    new Sim();
 
+    new Sim();
 };
 
 const drawInnerSlider = () => {
 
+    document.querySelector('.sim-slider-list').innerHTML = '';
     const glossaryKeys = Object.keys(glossaryItems);
-    const glossaryValues = Object.values(glossaryItems);
+
     let pageLimit = 14;
 
-    if(window.innerWidth < 1024 && window.innerWidth > 577) { // breakpoints for tablet
+    if(window.innerWidth < 992 && window.innerWidth > 577) { // breakpoints for tablet
         pageLimit = 10
     } else if (window.innerWidth < 576) {  // breakpoints for mobile
-        pageLimit = 5
+        pageLimit = 4
     }
+
     let numberOfPages = Math.ceil(glossaryKeys.length / pageLimit);
     let drawn = 0;
 
@@ -84,8 +86,15 @@ const drawInnerSlider = () => {
     document.querySelectorAll('.sim-slider-element').forEach(element =>{
         element.addEventListener('click', listToggle )
     })
+
 }
-window.addEventListener('resize', drawInnerSlider);
+
+const resizeSlider = () => {
+
+    drawInnerSlider();
+    new Sim();
+}
+window.addEventListener('resize', resizeSlider);
 
  fetch('./glossaryItems.json')
     .then(response => response.json())

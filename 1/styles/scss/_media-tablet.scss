@@ -68,6 +68,13 @@
     min-height: 400px;
 
   }
+  .main-page-nav-bar {
+    left: calc(50% - 210px);
+    
+    a {
+      padding: 25px 50px;
+    }
+  }
   .wrapper{
     flex-direction: column;
     .sim-slider{
