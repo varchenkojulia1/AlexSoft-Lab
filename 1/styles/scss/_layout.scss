@@ -1,6 +1,6 @@
 .container {
 
-  max-width: 1200px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 .container-fluid {
@@ -23,8 +23,12 @@ nav {
   padding: 20px 0;
 
   li{
-    margin-right: 50px;
-    padding: 10px 0;
+    margin-right: 30px;
+    a{
+      padding: 10px;
+      display: block;
+    }
+
 
     &:last-of-type{
       margin-right: 20px;
@@ -46,9 +50,12 @@ nav {
   ul{
     justify-content: center;
   }
-  li{
-  padding: 26px 100px;
+  a{
+    display: block;
+    padding: 25px 100px;
+
   }
+
 }
 //--------TIPS--------
 

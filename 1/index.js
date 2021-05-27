@@ -47,6 +47,13 @@ const getGlossaryItems = (data) => {
 
     glossaryItems = data;
 
+    drawInnerSlider()
+    new Sim();
+
+};
+
+const drawInnerSlider = () => {
+
     const glossaryKeys = Object.keys(glossaryItems);
     const glossaryValues = Object.values(glossaryItems);
     let pageLimit = 14;
@@ -77,9 +84,8 @@ const getGlossaryItems = (data) => {
     document.querySelectorAll('.sim-slider-element').forEach(element =>{
         element.addEventListener('click', listToggle )
     })
-    new Sim();
-
-};
+}
+window.addEventListener('resize', drawInnerSlider);
 
  fetch('./glossaryItems.json')
     .then(response => response.json())
@@ -270,7 +276,6 @@ const listToggle = (e) => {
     const glossaryKeys = Object.keys(glossaryItems);
     const glossaryValues = Object.values(glossaryItems)
 
-    console.log('click')
     if(e.target.parentElement.className === 'sim-slider-element') {
 
         document.querySelector('.description > h2').innerHTML = glossaryKeys[id];

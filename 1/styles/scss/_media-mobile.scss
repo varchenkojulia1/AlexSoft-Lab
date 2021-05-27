@@ -9,13 +9,17 @@
   .header-menu .active::after{
     left: 45%;
   }
+  .header-menu nav{
+    min-height: 90vh;
+    justify-content: space-between;
+  }
   .logo{
     padding: 20px 30px;
   }
   .main-page-nav-bar {
     z-index: 1;
     left: calc(50% - 140px);
-    li {
+    a {
       padding: 10px 25px;
     }
   }
@@ -27,15 +31,17 @@
       }
     }
   }
+
   .accordion{
     padding-top: 20px;
 
     &-item-header{
       padding: 0 0 20px 0;
-      font-size: 16px;
+      font-size: 16px !important;
       align-items: flex-end;
+
       .number{
-        padding: 0 10px;
+        padding: 0 10px !important;
         position: relative;
         top: 10px;
       }

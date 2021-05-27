@@ -25,6 +25,7 @@
     text-transform: uppercase;
     font-size: 12px;
   }
+
   li:hover{
     &::after{
       content: '';
@@ -53,6 +54,7 @@
   padding: 10px 30px;
   border: 1px solid white;
   border-radius: 20px;
+  background: transparent;
 }
 //-------------HEADING \ MAIN------------------
 .heading{
@@ -80,7 +82,7 @@
   z-index: 10;
 
 
-  a:not(:last-of-type) li::after{
+  li:not(:last-of-type)::after{
 
     background: $lightMain;
     width: 1px;
