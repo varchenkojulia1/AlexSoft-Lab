@@ -1,4 +1,4 @@
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .d-md-block{
     display: block;
   }
@@ -24,7 +24,7 @@
     }
     .active::after{
       background: $accent;
-      left: 48%;
+      left: calc(50% - 20px);
     }
     nav{
       position: absolute;

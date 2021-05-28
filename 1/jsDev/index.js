@@ -1,4 +1,3 @@
-
 //-------------------ACCORDION-----------------
 let accordionItems = document.querySelectorAll('.accordion-item-header');
 
@@ -7,7 +6,7 @@ const accordionToggle = (e) => {
 
     const container = e.target.parentElement.parentElement;
     const plus = container.querySelector('.small-wrapper');
-    const number = container.querySelector('.number')
+    const number = container.querySelector('.number');
 
     accordionItems.forEach(item => {
         let itemPlus = item.querySelector('.small-wrapper');
@@ -17,7 +16,7 @@ const accordionToggle = (e) => {
 
             container.classList.add('show');
             plus.classList.toggle('plus');
-            plus.classList.toggle('minus')
+            plus.classList.toggle('minus');
             number.classList.add('hide');
 
         } else {
@@ -59,9 +58,9 @@ const drawInnerSlider = () => {
 
     let pageLimit = 14;
 
-    if(window.innerWidth < 992 && window.innerWidth > 577) { // breakpoints for tablet
+    if(window.innerWidth < 1024 && window.innerWidth > 767) { // breakpoints for tablet
         pageLimit = 10
-    } else if (window.innerWidth < 576) {  // breakpoints for mobile
+    } else if (window.innerWidth < 767) {  // breakpoints for mobile
         pageLimit = 4
     }
 
@@ -137,10 +136,7 @@ window.addEventListener('resize', resizeSlider);
         if(this.currentElement < 0) this.currentElement = this.elemCount-1;
 
         if(!this.options.loop) {
-            if(this.currentElement == 0) {
 
-                this.leftArrow.style.opacity = '0.7'
-            };
             this.rightArrow.style.display = 'block'
         };
 
@@ -161,10 +157,7 @@ window.addEventListener('resize', resizeSlider);
         if(this.currentElement >= this.elemCount) this.currentElement = 0;
 
         if(!this.options.loop) {
-            if(this.currentElement == this.elemCount-1) {
 
-                this.rightArrow.style.opacity = '0.7'
-            };
             this.leftArrow.style.display = 'block'
         };
 
@@ -217,8 +210,7 @@ window.addEventListener('resize', resizeSlider);
         };
 
         if(!that.options.loop) {
-            that.leftArrow.style.display = 'none';  // disable left arrow
-            that.leftArrow.style.opacity = '0.5';  // disable left arrow
+
             that.options.auto = false; // disable auto autoscroll
         }
         else if(that.options.auto) {   // autoscroll initialization
@@ -273,8 +265,6 @@ window.addEventListener('resize', resizeSlider);
         }
     };
 
-
-
     //----------------------------------- END SLIDER----------------------------------
 
     //------------------------carousel toggle---------------------
@@ -283,7 +273,7 @@ const listToggle = (e) => {
 
     const id = e.target.id;
     const glossaryKeys = Object.keys(glossaryItems);
-    const glossaryValues = Object.values(glossaryItems)
+    const glossaryValues = Object.values(glossaryItems);
 
     if(e.target.parentElement.className === 'sim-slider-element') {
 
@@ -297,7 +287,6 @@ const listToggle = (e) => {
     e.target.classList.add('active')
     }
 }
-
 
 //----------------------------FAQS------------------------------------
 fetch('./questionsAnswers.json')
@@ -332,8 +321,6 @@ fetch('./questionsAnswers.json')
 
 }
 
-
-
     // -------------------------- hamburger -----------------
 
     const showMenu = (e) => {
@@ -341,19 +328,18 @@ fetch('./questionsAnswers.json')
         document.getElementById('menuWrapper').classList.toggle('d-md-none');
         document.getElementById('hamburger').classList.toggle('cross');
         document.getElementById('hamburger').classList.toggle('hamburger');
-
     }
 
-    document.getElementById('hamburger').addEventListener('click', showMenu)
+    document.getElementById('hamburger').addEventListener('click', showMenu);
 
 const scrollFunc = (e) => {
 
-    const headerMenu = document.querySelector('.header-menu');
+    const headerMenu = document.getElementById('header');
 
     let coordinates = 600;
-    if(window.innerWidth < 1024 && window.innerWidth > 577) { // breakpoints for tablet
+    if(window.innerWidth < 1024 && window.innerWidth > 767) { // breakpoints for tablet
         coordinates = 400
-    } else if (window.innerWidth < 576) {  // breakpoints for mobile
+    } else if (window.innerWidth < 767) {  // breakpoints for mobile
         coordinates = 300
     }
 
@@ -361,7 +347,7 @@ const scrollFunc = (e) => {
 
         headerMenu.classList.add('gray-header')
 
-    } else if ((window.pageYOffset < coordinates) && (headerMenu.classList.contains('header-menu'))){
+    } else {
 
         headerMenu.classList.remove('gray-header')
     }

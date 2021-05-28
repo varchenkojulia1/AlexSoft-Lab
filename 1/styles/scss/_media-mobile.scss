@@ -1,4 +1,4 @@
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .container{
     max-width: 80vw;
   }
@@ -16,9 +16,13 @@
   .logo{
     padding: 20px 30px;
   }
+  .logo + div{
+    margin-right: 10px;
+  }
   .main-page-nav-bar {
-    z-index: 1;
-    left: calc(50% - 140px);
+    z-index: 5;
+    left: calc(50% - 150px);
+    top: 67px;
     a {
       padding: 10px 25px;
     }
@@ -36,7 +40,7 @@
     padding-top: 20px;
 
     &-item-header{
-      padding: 0 0 20px 0;
+      padding: 0 0 20px 0 !important;
       font-size: 16px !important;
       align-items: flex-end;
 
@@ -72,11 +76,14 @@
     }
     .minus{
       position: relative;
-      left: -10px;
       margin: auto;
+      top: 15px;
     }
   }
 }
+  .sim-slider-arrow-right, .sim-slider-arrow-left{
+    opacity: unset;
+  }
   .glossary{
     margin-top: 40px;
     margin-bottom: 20px;
@@ -142,6 +149,9 @@
   }
 
   footer{
+    hr.container{
+      max-width: 100%;
+    }
     .container.top{
       width: 100%;
       margin: 0;
@@ -155,6 +165,7 @@
         width: 100vw;
         li{
           padding-left: 20px;
+
         }
       }
       .contacts-wrapper{
@@ -165,6 +176,11 @@
         grid-template-columns: 1fr;
         p{
           padding-left: 20px;
+          &:nth-of-type(3){
+            max-width: 270px;
+            font-size: 12px;
+            line-height: 20px;
+          }
         }
       }
       .map{

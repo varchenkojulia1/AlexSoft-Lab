@@ -53,6 +53,13 @@ footer{
     display: grid;
     grid-template-columns: minmax(250px, auto) auto;
     gap: 20px;
+
+    nav li:last-of-type{
+      margin-left: 10px;
+      .phone a {
+        padding: 0;
+      }
+    }
   }
   .map{
     text-align: right;
@@ -62,6 +69,7 @@ footer{
     a{
       color: $accent;
     }
+
   }
 .bottom{
   justify-content: space-between;

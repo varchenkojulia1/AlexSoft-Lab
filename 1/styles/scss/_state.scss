@@ -72,6 +72,9 @@
   .btn{
     border-color: $mainColor;
     color: $mainColor !important;
+    &:hover{
+      color: white !important;
+    }
   }
 
   .hamburger, .cross{
