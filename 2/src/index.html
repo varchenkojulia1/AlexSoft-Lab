@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework 2</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Actor&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container-fluid" id="header">
+      <div class="header-menu d-flex container">
+        <div class="logo flex-grow-1">
+          <a href="#">
+            <svg
+              width="111"
+              height="24"
+              viewBox="0 0 111 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.8484 9.96858L10.5436 9.75258C7.76509 9.30749 5.76764 8.76094 5.76764 7.07549C5.76764 5.3213 7.61891 4.29694 10.1945 4.29694C12.4549 4.29694 14.448 4.96785 16.1509 5.9093L18.9393 2.49694C16.0135 0.761304 13.3549 0.0303955 10.0985 0.0303955C5.17091 0.0303955 0.872727 2.54276 0.872727 7.36894C0.872727 11.5711 3.84873 13.3395 7.93091 14.0006L9.40036 14.2308C12.624 14.7588 14.3149 15.3369 14.3149 16.9449C14.3149 18.7264 12.3447 19.7366 9.768 19.7366C6.99927 19.7366 4.48691 18.7308 2.79164 17.5362L0 20.9628C2.47964 22.9602 6.22691 23.9846 9.74945 23.9846C14.7284 23.9846 19.224 21.5366 19.224 16.4486C19.224 12.4297 16.0004 10.6297 11.8484 9.96858Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M32.8313 11.7184L42.535 0.429688H36.7488L29.0971 9.80387H26.9164V0.429688H22.3008V23.5711H26.9164V14.0519H29.047L37.2811 23.5711H43.2648L32.8313 11.7184Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M84.537 0.430054V14.1013C84.537 17.8857 82.3694 19.5711 79.1959 19.5711C76.0225 19.5711 73.8592 17.8857 73.8592 14.1013V0.430054H69.2305V14.3315C69.2305 20.7286 73.3127 23.985 79.1959 23.985C85.0836 23.985 89.1668 20.7286 89.1668 14.3315V0.430054H84.537Z"
+                fill="white"
+              />
+              <mask
+                id="mask0"
+                mask-type="alpha"
+                maskUnits="userSpaceOnUse"
+                x="91"
+                y="0"
+                width="20"
+                height="24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M91.4766 0.430054H110.438V23.5715H91.4766V0.430054Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask0)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M91.4766 0.430054V4.74242H98.6504V23.5715H103.265V4.74242H110.439V0.430054H91.4766Z"
+                  fill="white"
+                />
+              </g>
+              <mask
+                id="mask1"
+                mask-type="alpha"
+                maskUnits="userSpaceOnUse"
+                x="42"
+                y="0"
+                width="25"
+                height="24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M42.1484 0.000732422H66.1528V24H42.1484V0.000732422Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask1)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M54.1528 19.3426C50.0968 19.3426 46.811 16.0567 46.811 11.9996C46.811 7.94801 50.0968 4.65782 54.1528 4.65782C58.2044 4.65782 61.4913 7.94801 61.4913 11.9996C61.4913 16.0567 58.2044 19.3426 54.1528 19.3426ZM54.1528 0.000732422C47.5212 0.000732422 42.1484 5.37346 42.1484 11.9996C42.1484 18.6269 47.5212 24.0007 54.1528 24.0007C60.7801 24.0007 66.1528 18.6269 66.1528 11.9996C66.1528 5.37346 60.7801 0.000732422 54.1528 0.000732422Z"
+                  fill="white"
+                />
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <div class="flex-grow-1">
+          <div class="hamburger d-none d-md-block" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <nav class="d-flex d-md-none" id="menuWrapper">
+            <ul class="d-flex">
+              <li>
+                <a href="#"> Why Skout </a>
+              </li>
+              <li>
+                <a href="#"> Products </a>
+              </li>
+              <li>
+                <a href="#"> Partners </a>
+              </li>
+              <li>
+                <a href="#"> Company </a>
+              </li>
+              <li class="active">
+                <a href="#"> Tips & Tools </a>
+              </li>
+              <li>
+                <a href="#"> Blog </a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <button href="#" class="btn btn-light">Get Skout</button>
+              <button href="#" class="btn btn-light">Log In</button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="heading container-fluid">
+        <div class="container">
+          <h1>Find trouble before trouble finds you.</h1>
+          <div class="container-sm heading-text-wrapper">
+            <p>
+              SKOUT is a cybersecurity company that delivers total protection
+              for total peace of mind. Whether you’re an international
+              conglomerate or a mom-and-pop shop we make cybersecurity easy and
+              accessible because we believe security is universal and peace of
+              mind is worth protecting.
+            </p>
+            <div class="btn-wrapper">
+              <a href="#" class="btn btn-light"> Why SKOUT </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="container security-alert" id="securityAlert">
+        <div class="img-wrapper" id="imgWrapper">
+          <img src="src/img/SKOUT_SA_Mockup.png" alt="securityAlert" />
+        </div>
+        <div class="text-wrapper" id="textWrapper">
+          <h3>What is SKOUT?</h3>
+          <p>
+            A cybersecurity platform that offers world-class protection,
+            monitoring everything from emails to endpoints. With a team of
+            security experts from both the public and private sectors, our
+            cloud-native streaming data analytics platform offers total peace of
+            mind to businesses of any size.
+          </p>
+        </div>
+        <div class="btn-wrapper d-flex" id="btnGroup">
+          <a href="#" class="btn btn-light"> Learn more </a>
+          <a href="#" class="btn btn-dark"> Explore Products </a>
+        </div>
+      </section>
+      <section class="cybersecurity container">
+        <h2>Cybersecurity Essentials</h2>
+        <div class="wrapper container">
+          <div class="inner-wrapper">
+            <div class="text-wrapper">
+              <h4>System Patching</h4>
+              <p>
+                There’s nothing hackers love more than a dismissed update
+                reminder. We keep your team’s computers in shape and up-to-date.
+              </p>
+            </div>
+            <div class="img-wrapper">
+              <img src="src/img/cybersecurity-1.svg" alt="system patching" />
+            </div>
+          </div>
+
+          <div class="inner-wrapper">
+            <div class="text-wrapper">
+              <h4>End-to-End Protection</h4>
+              <p>
+                51% of breaches involved malware that infects endpoints. We
+                cover your bases.
+              </p>
+            </div>
+            <div class="img-wrapper">
+              <img src="src/img/cybersecurity-2.svg" alt="system patching" />
+            </div>
+          </div>
+
+          <div class="inner-wrapper">
+            <div class="text-wrapper">
+              <h4>Empowering Teams</h4>
+              <p>
+                With 43% of breaches involving social attacks, cybersecurity is
+                a team sport. We get your employees up to speed.
+              </p>
+            </div>
+            <div class="img-wrapper">
+              <img src="src/img/cybersecurity-3.svg" alt="system patching" />
+            </div>
+          </div>
+
+          <div class="inner-wrapper">
+            <div class="text-wrapper">
+              <h4>Secure Credentials</h4>
+              <p>81% of attacks involve stolen or weak credentials.</p>
+            </div>
+            <div class="img-wrapper">
+              <img src="src/img/cybersecurity-4.svg" alt="system patching" />
+            </div>
+          </div>
+        </div>
+        <div class="btn-group">
+          <a href="#" class="btn btn-dark">More Tips</a>
+        </div>
+      </section>
+      <section class="container-fluid double-container">
+        <section class="container problems">
+          <h2>Problems We Solve</h2>
+          <div class="slider-1 container-sm">
+            <div class="sl1-item">
+              <div class="text-wrapper">
+                <h4>Threat Intelligence</h4>
+                <p>
+                  Our team is part of a global network of public and private
+                  sector businesses and agencies that share the latest
+                  intelligence on emerging threats, attacks, and alerts. We
+                  never share the names of companies or customers and we are
+                  never in the dark.
+                </p>
+                <button class="btn btn-dark">Get SKOUT</button>
+              </div>
+              <div class="img-wrapper">
+                <img src="src/img/problems-1.svg" alt="img" />
+              </div>
+            </div>
+            <div class="sl1-item">
+              <div class="text-wrapper">
+                <h4>Threat Intelligence</h4>
+                <p>
+                  Our team is part of a global network of public and private
+                  sector businesses and agencies that share the latest
+                  intelligence on emerging threats, attacks, and alerts. We
+                  never share the names of companies or customers and we are
+                  never in the dark.
+                </p>
+                <button class="btn btn-dark">Get SKOUT</button>
+              </div>
+              <div class="img-wrapper">
+                <img src="src/img/problems-1.svg" alt="img" />
+              </div>
+            </div>
+            <div class="sl1-item">
+              <div class="text-wrapper">
+                <h4>Threat Intelligence</h4>
+                <p>
+                  Our team is part of a global network of public and private
+                  sector businesses and agencies that share the latest
+                  intelligence on emerging threats, attacks, and alerts. We
+                  never share the names of companies or customers and we are
+                  never in the dark.
+                </p>
+                <button class="btn btn-dark">Get SKOUT</button>
+              </div>
+              <div class="img-wrapper">
+                <img src="src/img/problems-1.svg" alt="img" />
+              </div>
+            </div>
+            <div class="sl1-item">
+              <div class="text-wrapper">
+                <h4>Threat Intelligence</h4>
+                <p>
+                  Our team is part of a global network of public and private
+                  sector businesses and agencies that share the latest
+                  intelligence on emerging threats, attacks, and alerts. We
+                  never share the names of companies or customers and we are
+                  never in the dark.
+                </p>
+                <button class="btn btn-dark">Get SKOUT</button>
+              </div>
+              <div class="img-wrapper">
+                <img src="src/img/problems-1.svg" alt="img" />
+              </div>
+            </div>
+            <div class="sl1-item">
+              <div class="text-wrapper">
+                <h4>Threat Intelligence</h4>
+                <p>
+                  Our team is part of a global network of public and private
+                  sector businesses and agencies that share the latest
+                  intelligence on emerging threats, attacks, and alerts. We
+                  never share the names of companies or customers and we are
+                  never in the dark.
+                </p>
+                <button class="btn btn-dark">Get SKOUT</button>
+              </div>
+              <div class="img-wrapper">
+                <img src="src/img/problems-1.svg" alt="img" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container-fluid plans">
+          <h2>SKOUT Plans</h2>
+          <div class="plans-items container-fluid">
+            <div>
+              <h3>Bronze</h3>
+              <ul>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Security Training</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Email</p>
+                </li>
+                <li class="disable d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Endpoint</p>
+                </li>
+                <li class="disable d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Monitoring</p>
+                </li>
+                <li class="disable d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Annual Pro Services</p>
+                </li>
+              </ul>
+              <div class="btn-wrapper d-flex">
+                <button class="btn btn-light">Request a Quote</button>
+              </div>
+            </div>
+            <div>
+              <h3>Silver</h3>
+              <ul>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Security Training</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Email</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Endpoint</p>
+                </li>
+                <li class="disable d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Monitoring</p>
+                </li>
+                <li class="disable d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Annual Pro Services</p>
+                </li>
+              </ul>
+              <div class="btn-wrapper">
+                <button class="btn btn-light">Request a Quote</button>
+              </div>
+            </div>
+            <div>
+              <h3>Gold</h3>
+              <ul>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Security Training</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Email</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Endpoint</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Monitoring</p>
+                </li>
+                <li class="disable d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Annual Pro Services</p>
+                </li>
+              </ul>
+              <div class="btn-wrapper">
+                <button class="btn btn-light">Request a Quote</button>
+              </div>
+            </div>
+            <div>
+              <h3>Plus</h3>
+              <ul>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Security Training</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Email</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Endpoint</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Monitoring</p>
+                </li>
+                <li class="d-flex">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                  <p>Annual Pro Services</p>
+                </li>
+              </ul>
+              <div class="btn-wrapper">
+                <button class="btn btn-light">Request a Quote</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="companies container">
+        <div class="companies-sl">
+          <div class="companies-item d-flex">
+            <div class="img-wrapper">
+              <img src="src/img/companies1.svg" class="company" />
+            </div>
+            <div class="text-wrapper">
+              <q>
+                Skout helped us bring our security and operations forward
+                dramatically by being so responsive and detail-oriented. The
+                whole team is really great to work with.
+              </q>
+              <p>— Yoni Rechtman</p>
+            </div>
+          </div>
+          <div class="companies-item d-flex">
+            <div class="img-wrapper">
+              <img src="src/img/companies2.svg" class="company" />
+            </div>
+            <div class="text-wrapper">
+              <q>
+                Skout helped us bring our security and operations forward
+                dramatically by being so responsive and detail-oriented. The
+                whole team is really great to work with.
+              </q>
+              <p>— Yoni Rechtman</p>
+            </div>
+          </div>
+          <div class="companies-item d-flex">
+            <div class="img-wrapper">
+              <img src="src/img/companies3.svg" class="company" />
+            </div>
+            <div class="text-wrapper">
+              <q>
+                Skout helped us bring our security and operations forward
+                dramatically by being so responsive and detail-oriented. The
+                whole team is really great to work with.
+              </q>
+              <p>— Yoni Rechtman</p>
+            </div>
+          </div>
+          <div class="companies-item d-flex">
+            <div class="img-wrapper">
+              <img src="src/img/companies4.svg" class="company" />
+            </div>
+            <div class="text-wrapper">
+              <q>
+                Skout helped us bring our security and operations forward
+                dramatically by being so responsive and detail-oriented. The
+                whole team is really great to work with.
+              </q>
+              <p>— Yoni Rechtman</p>
+            </div>
+          </div>
+          <div class="companies-item d-flex">
+            <div class="img-wrapper">
+              <img src="src/img/companies5.svg" class="company" />
+            </div>
+            <div class="text-wrapper">
+              <q>
+                Skout helped us bring our security and operations forward
+                dramatically by being so responsive and detail-oriented. The
+                whole team is really great to work with.
+              </q>
+              <p>— Yoni Rechtman</p>
+            </div>
+          </div>
+        </div>
+        <div class="companies-list d-flex">
+          <div>
+            <img src="src/img/companies1.svg" alt="company" />
+          </div>
+          <div>
+            <img src="src/img/companies2.svg" alt="company" />
+          </div>
+          <div>
+            <img src="src/img/companies3.svg" alt="company" />
+          </div>
+          <div>
+            <img src="src/img/companies4.svg" alt="company" />
+          </div>
+          <div>
+            <img src="src/img/companies5.svg" alt="company" />
+          </div>
+        </div>
+      </section>
+      <section class="more-question container-fluid">
+        <div class="img-wrapper">
+          <img src="src/img/more-questions-section.png" alt="img" />
+        </div>
+        <div class="text-wrapper">
+          <h3>Still have questions? Reach out today.</h3>
+          <p>
+            Whether you’re a potential management service provider or a business
+            owner looking for a little extra peace of mind, our representatives
+            are standing by to answer any questions and walk you through the
+            benefits of partnering with us.
+          </p>
+        </div>
+      </section>
+      <section class="action-box">
+        <div>
+          <h4>Ready to learn more?</h4>
+          <div class="btn-wrapper">
+            <button class="btn">Get in Touch <i class="arrow"></i></button>
+          </div>
+        </div>
+        <div>
+          <h4>Are you a MSP?</h4>
+          <div class="btn-wrapper">
+            <a href="#" class="btn"> Become a Partner <i class="arrow"></i></a>
+            <!--            <i class="arrow"></i>-->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="container-fluid">
+      <div class="top container">
+        <nav class="flex-grow-1">
+          <ul>
+            <li>
+              <a href="#"> Blog </a>
+            </li>
+            <li>
+              <a href="#"> Company </a>
+            </li>
+            <li>
+              <a href="#"> Terms & Conditions </a>
+            </li>
+            <li>
+              <a href="#"> Privacy Policy </a>
+            </li>
+            <li>
+              <a href="#"> Careers </a>
+            </li>
+            <li>
+              Call the SOC
+              <p class="phone">
+                <a href="tel:+18558384500"> 1-855-838-4500 </a>
+              </p>
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <ul class="contacts-wrapper">
+            <li class="contacts-line">
+              <p>New York</p>
+              <p>
+                <a href="tel:+16312036600"> +1 631-203-6600 </a>
+              </p>
+              <p>423 W 55th St. 7th Floor New York, NY, 10019</p>
+              <p class="map">
+                <a href="#"> View Map </a>
+              </p>
+            </li>
+            <li class="contacts-line">
+              <p>Corporate Headquarters</p>
+              <p>
+                <a href="tel:+16312036600"> +1 631-203-6600 </a>
+              </p>
+              <p>270 S. Service Road, Suite 55 Melville, NY, 11747</p>
+              <p class="map">
+                <a href="#"> View Map </a>
+              </p>
+            </li>
+            <li class="contacts-line">
+              <p>EMEA</p>
+              <p>
+                <a href="tel:+35316600800"> +353-1-6600800 </a>
+              </p>
+              <p>
+                IDA Business and Technology Park, Mountrath Road, Unit 2
+                Portlaoise, Ireland
+              </p>
+              <p class="map">
+                <a href="#"> View Map </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="container" />
+      <div class="bottom container d-flex">
+        <div class="social">
+          <a href="#">
+            <img src="src/img/tweeter.svg" alt="tweeter" />
+          </a>
+          <a href="#">
+            <img src="src/img/facebook.svg" alt="facebook" />
+          </a>
+          <a href="#">
+            <img src="src/img/youtube.svg" alt="youtube" />
+          </a>
+          <a href="#">
+            <img src="src/img/linkedIn.svg" alt="linkedIn" />
+          </a>
+        </div>
+        <div class="footer-logo">
+          <img src="src/img/footer-logo.svg" alt="logo" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

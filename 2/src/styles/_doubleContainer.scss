@@ -1,0 +1,215 @@
+.double-container {
+  background: linear-gradient(to right top, #b0adad 10%, white 60%);
+}
+
+.problems {
+  font-family: Aclonica, sans-serif;
+
+  h2 {
+    padding-top: 120px;
+  }
+
+  .sl1-item {
+    display: grid !important;
+    grid-template-columns: repeat(2, 50%);
+
+    h4 {
+      text-transform: uppercase;
+      font-family: Acme, sans-serif;
+      letter-spacing: 2px;
+      font-size: 12px;
+      padding: 80px 0 18px 0;
+    }
+
+    p {
+      font-size: 16px;
+      max-width: 400px;
+      padding-bottom: 40px;
+    }
+
+    .img-wrapper {
+      max-width: 470px;
+      max-height: 360px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    max-width: 20px;
+    top: calc(50% - 100px);
+
+    li.slick-active button:before,
+    li button:before {
+      color: $accent;
+      opacity: 1;
+      left: -3px;
+      width: 24px;
+      height: 24px;
+    }
+
+    li.slick-active {
+      border: 1px solid $accent;
+      border-radius: 50%;
+    }
+  }
+
+  .btn:hover {
+    background: white;
+  }
+}
+
+.plans {
+  position: relative;
+  margin-bottom: 300px;
+
+  h2 {
+    text-align: center;
+    padding-bottom: 350px;
+  }
+
+  &-items {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 100px;
+
+    & > div {
+      min-width: 330px;
+      box-shadow: 0 12px 24px $lightMain;
+      border-radius: 5px;
+      background: white;
+      &:hover {
+        background: linear-gradient(
+          to right bottom,
+          $gradientColor1 80%,
+          $gradientColor2 90%
+        );
+        transition-duration: 0.2s;
+        transform: scale(1.1);
+
+        &:last-of-type {
+          transform: translate(-20px) scale(1.1);
+        }
+
+        li.disable {
+          p {
+            color: $lightMain;
+          }
+        }
+
+        h3,
+        p {
+          color: white;
+        }
+
+        .outer,
+        .inner,
+        li {
+          border-color: white;
+        }
+
+        .btn-light {
+          background: white;
+          border-color: white;
+          &:hover {
+            color: $accent;
+          }
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-right: auto;
+      }
+
+      h3 {
+        color: $accent;
+        text-align: center;
+        padding: 40px;
+        font-weight: 400;
+        font: {
+          family: Acme, sans-serif;
+          size: 18px;
+        }
+        letter-spacing: 2.25px;
+        text-transform: uppercase;
+      }
+
+      ul {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      li {
+        padding: 10px 0 20px 0;
+        position: relative;
+
+        .inner {
+          width: 15px;
+          height: 8px;
+          border: {
+            bottom: 2px solid $accent;
+            left: 2px solid $accent;
+          }
+          transform: rotate(-45deg);
+          position: relative;
+          top: -3px;
+        }
+
+        .outer {
+          padding: 7px;
+          border: 1px solid $accent;
+          border-radius: 100%;
+        }
+        &.disable .inner {
+          transform: rotate(0);
+          border: {
+            left: none;
+          }
+        }
+        p {
+          padding-left: 10px;
+        }
+      }
+
+      li:not(:last-of-type) {
+        border: {
+          top: 1px solid $lightMain;
+          bottom: 1px solid $lightMain;
+        }
+      }
+
+      .btn-wrapper {
+        padding-top: 50px;
+        padding-bottom: 30px;
+
+        .btn {
+          border: 1px solid $accent;
+          margin: 0 auto;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 12px;
+          box-shadow: $btnShadow;
+
+          &:hover {
+            box-shadow: $btnHoverShadow;
+          }
+        }
+      }
+
+      li.disable {
+        color: $lightMain;
+
+        .outer,
+        .inner {
+          border-color: $lightMain;
+        }
+      }
+    }
+  }
+}

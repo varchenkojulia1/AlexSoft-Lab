@@ -1,0 +1,84 @@
+.companies {
+  padding-top: 50px;
+  position: relative;
+  margin-bottom: 140px;
+
+  &-item {
+    justify-content: space-around;
+    display: flex !important;
+  }
+
+  .text-wrapper {
+    max-width: 570px;
+    font-size: 24px;
+    color: $mainColor;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    q {
+      display: block;
+    }
+
+    p {
+      text-align: right;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 10px;
+    }
+  }
+  .slick-track > div:not(.slick-current) {
+    opacity: 0.5;
+  }
+  .img-wrapper {
+    min-width: 340px;
+
+    svg {
+      width: 100%;
+    }
+  }
+  &-list {
+    top: -20px;
+  }
+  .slick-list {
+    width: 100%;
+  }
+  .slick-slide {
+    cursor: pointer;
+    img {
+      margin: 0 auto;
+    }
+  }
+  .slick-dots {
+    bottom: -90px;
+    display: flex;
+
+    li {
+      width: 100%;
+      margin: 0;
+
+      button {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: unset;
+        bottom: 0;
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 5px;
+          background: $lightMain;
+          top: unset;
+          bottom: 0;
+        }
+      }
+
+      &.slick-active {
+        button:before {
+          background: $accent;
+        }
+      }
+    }
+  }
+}

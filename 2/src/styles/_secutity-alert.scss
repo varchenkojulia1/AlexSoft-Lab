@@ -1,0 +1,45 @@
+.security-alert {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-areas:
+    "img text"
+    "img btn";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 350px auto;
+
+  .img-wrapper {
+    max-width: 600px;
+    grid-area: img;
+    img {
+      width: 100%;
+    }
+  }
+
+  .text-wrapper {
+    text-align: left;
+    padding-left: 50px;
+    font-family: Aclonica, sans-serif;
+    grid-area: text;
+
+    h3 {
+      padding-top: 120px;
+    }
+
+    p {
+      padding-top: 40px;
+      padding-bottom: 100px;
+      max-width: 470px;
+    }
+  }
+  .btn-wrapper {
+    grid-area: btn;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 50px;
+    max-width: 470px;
+  }
+  .btn {
+    border-color: $accent;
+    box-shadow: $btnShadow;
+  }
+}

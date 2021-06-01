@@ -1,0 +1,67 @@
+.action-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 40%));
+  gap: 20%;
+  max-width: 1030px;
+  background: linear-gradient(
+    to right top,
+    $gradientColor2 10%,
+    darken($gradientColor1, 10%) 40%
+  );
+  color: white;
+  margin: -60px auto 80px auto;
+  z-index: 10;
+
+  h4 {
+    border-bottom: 1px solid white;
+    padding: 30px 10px 10px 0;
+    font: {
+      family: Acme, sans-serif;
+      size: 12px;
+      weight: 400;
+    }
+    letter-spacing: 2px;
+  }
+
+  & > div:first-of-type {
+    padding-left: 40px;
+  }
+  & > div:last-of-type {
+    padding-right: 40px;
+  }
+  .btn {
+    border: none;
+    padding: 10px 40px;
+    font-size: 24px;
+  }
+  .btn-wrapper {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .arrow {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../img/arrow.svg") no-repeat;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    &:hover {
+      animation-name: arrow-move;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+    }
+  }
+}
+@keyframes arrow-move {
+  50% {
+    opacity: 0.5;
+    transform: translate(10px) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}

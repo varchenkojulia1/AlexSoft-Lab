@@ -1,0 +1,97 @@
+footer {
+  background: $footerBG;
+
+  ul {
+    margin-top: 60px;
+
+    li {
+      color: $mainColor;
+      padding: 15px 0;
+    }
+
+    li:hover a {
+      color: $accent;
+    }
+  }
+
+  .phone {
+    position: relative;
+
+    &:hover::after {
+      content: "";
+      width: 100px;
+      height: 1.5px;
+      background: $accent;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:hover a {
+      color: $accent;
+    }
+  }
+
+  a,
+  p {
+    color: $mainColor;
+  }
+
+  .contacts-line {
+    display: grid;
+    grid-template-rows: min(100px);
+    grid-template-columns: repeat(4, 1fr);
+    text-wrap: normal;
+    border-top: 1px solid $accent;
+
+    &:hover {
+      p {
+        color: $accent;
+      }
+    }
+
+    p {
+      padding: 10px;
+    }
+  }
+
+  .top {
+    display: grid;
+    grid-template-columns: minmax(250px, auto) auto;
+    gap: 20px;
+
+    .phone a {
+      padding: 0;
+    }
+  }
+
+  .map {
+    text-align: right;
+
+    &:hover a {
+      color: $mainColor;
+    }
+
+    a {
+      color: $accent;
+    }
+  }
+
+  .bottom {
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-bottom: 20px;
+
+    a:not(:first-of-type) {
+      margin-left: 10px;
+    }
+
+    .social {
+      align-self: center;
+
+      a:hover img {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
