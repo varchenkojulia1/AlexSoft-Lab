@@ -1,0 +1,208 @@
+@media screen and (max-width: 767px) {
+  .container{
+    max-width: 80vw;
+  }
+  .heading h1{
+    font-size: 40px;
+    padding: 140px 0;
+  }
+  .header-menu nav{
+    min-height: 90vh;
+    justify-content: space-between;
+  }
+  .logo{
+    padding: 20px 30px;
+  }
+  .logo + div{
+    margin-right: 10px;
+  }
+  .main-page-nav-bar {
+    z-index: 5;
+    left: calc(50% - 150px);
+    top: 67px;
+    a {
+      padding: 10px 25px;
+    }
+  }
+  .tips{
+    .header{
+      margin-top: 30px;
+      svg{
+        width: 160px;
+      }
+    }
+  }
+
+  .accordion{
+    padding-top: 20px;
+
+    &-item-header{
+      padding: 0 0 20px 0 !important;
+      font-size: 16px !important;
+      align-items: flex-end;
+
+      .number{
+        padding: 0 10px !important;
+        position: relative;
+        top: 10px;
+      }
+    }
+    .plus{
+      padding: 0;
+    }
+
+  &-item.show{
+    .accordion-item-header{
+      font-size: 24px;
+      display: grid;
+      grid-template-columns: auto 50px;
+    }
+    .accordion-item-content{
+      flex-direction: column;
+    }
+    .img-wrapper{
+      max-width: 160px;
+      margin: 0 auto;
+      img{
+        width: 100%;
+      }
+    }
+    .text-wrapper{
+      font-size: 14px;
+
+    }
+    .minus{
+      position: relative;
+      margin: auto;
+      top: 15px;
+    }
+  }
+}
+  .sim-slider-arrow-right, .sim-slider-arrow-left{
+    opacity: unset;
+  }
+  .glossary{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    .header{
+      svg{
+        width: 140px;
+      }
+    }
+    .wrapper{
+      margin-top: 10px;
+
+      .sim-slider{
+        min-height: 200px;
+        padding-bottom: 20px;
+      }
+    }
+    .description{
+      max-width: 80%;
+      margin: 0 auto;
+      h2{
+        font-size: 32px;
+        margin: 0 auto 40px 40px;
+      }
+      p{
+        max-width: 90%;
+        font-size: 16px;
+        &::before{
+          left: -20px;
+        }
+      }
+    }
+  }
+  .faqs{
+    padding-top: 50px;
+    .header{
+      svg{
+        width: 140px;
+      }
+    }
+    .letter-big {
+      font-size: 40px;
+      min-width: unset;
+      margin-right: 20px;
+    }
+
+    .question{
+      font-size: 16px;
+    }
+
+    .answer-box{
+      margin: 10px;
+      font-size: 14px;
+      grid-template-columns: 70px auto;
+    }
+
+    .question-box{
+      grid-template-columns: 70px auto 20px;
+    }
+
+    .arrow{
+      width: 20px;
+    }
+  }
+
+  footer{
+    hr.container{
+      max-width: 100%;
+    }
+    .container.top{
+      width: 100%;
+      margin: 0;
+    }
+    .top{
+      grid-template-columns: auto;
+      grid-template-rows: repeat(2, auto);
+      nav{
+        padding: 0 0 0 10px;
+        text-align: left;
+        width: 100vw;
+        li{
+          padding-left: 20px;
+
+        }
+      }
+      .contacts-wrapper{
+          margin-top: 20px;
+        }
+      .contacts-line{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr;
+        p{
+          padding-left: 20px;
+          &:nth-of-type(3){
+            max-width: 270px;
+            font-size: 12px;
+            line-height: 20px;
+          }
+        }
+      }
+      .map{
+        text-align: left;
+      }
+      }
+    .bottom{
+      flex-direction: column;
+      justify-content: center;
+      .footer-logo{
+        width: 50%;
+        margin: 10px auto;
+        img{
+          width: 100%;
+        }
+      }
+      .social{
+        display: flex;
+        align-self: unset;
+        a{
+          display: block;
+          margin: 0 auto;
+
+        }
+      }
+    }
+  }
+}

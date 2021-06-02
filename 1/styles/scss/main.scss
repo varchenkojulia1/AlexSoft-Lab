@@ -1,0 +1,112 @@
+@import "variables";
+
+@import "base";
+
+@import "layout";
+
+@import "state";
+
+//------------HEADER---------------
+
+.header-menu {
+  justify-content: center;
+  z-index: 10;
+  width: 100vw;
+
+  li{
+    position: relative;
+  }
+
+  nav li a, .btn {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  li:hover{
+    &::after{
+      content: '';
+      width: 20px;
+      height: 1.5px;
+      background: white;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+    }
+  }
+
+  .btn:hover{
+    background: darken($accent, 10%) ;
+    border-color: transparent;
+    box-shadow: 0 0 10px $accent;
+  }
+}
+
+.logo {
+  padding: 20px 80px;
+}
+
+.btn {
+  display: block;
+  padding: 10px 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background: transparent;
+}
+//-------------HEADING \ MAIN------------------
+.heading{
+
+  background: linear-gradient(to right, #18909b 50%, #55e955 100% );
+  text-align: center;
+  z-index: 1;
+
+  h1{
+    font-size: 110px;
+    letter-spacing: 1px;
+    color: white;
+    text-transform: uppercase;
+    padding: 240px 0;
+    font-weight: 400;
+    font-family: 'Actor', sans-serif;
+  }
+}
+.main-page-nav-bar {
+
+  background: white;
+  filter: drop-shadow(0px 4px 12px $lightMain);
+  border-top: 5px solid $accent;
+  border-radius: 5px;
+  z-index: 10;
+
+
+  li:not(:last-of-type)::after{
+
+    background: $lightMain;
+    width: 1px;
+    height: 40px;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+  a{
+    text-transform: uppercase;
+    color: $mainColor;
+    position: relative;
+    &:hover{
+      color: $accent;
+    }
+  }
+}
+
+@import "accordion";
+@import "glossary";
+@import "slider";
+@import "faqs";
+@import "footer";
+
+
+@import "media-tablet";
+
+@import "media-mobile";
+
