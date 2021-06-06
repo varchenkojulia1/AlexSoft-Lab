@@ -6,10 +6,12 @@
   header {
     .logo {
       padding: 20px 0;
+
       & + div {
         margin: 0;
       }
     }
+
     nav {
       height: 90vh;
     }
@@ -18,10 +20,12 @@
     h1 {
       font-size: 40px;
     }
+
     &-text-wrapper {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, auto);
       gap: 40px;
+
       p {
         font-size: 16px;
       }
@@ -33,6 +37,7 @@
       min-width: 80vw;
       opacity: 1;
     }
+
     .text-wrapper {
       padding: 0;
       text-align: left;
@@ -44,21 +49,26 @@
       font-size: 32px;
       padding: 0;
     }
+
     .wrapper {
       margin: 0;
     }
+
     .inner-wrapper {
       .text-wrapper {
         margin-left: 20px;
+
         h4 {
           font-size: 16px;
           padding-top: 16px;
         }
+
         p {
           font-size: 12px;
           padding-bottom: 20px;
         }
       }
+
       .img-wrapper {
         margin: 0 10px;
       }
@@ -70,35 +80,40 @@
         font-size: 32px;
         padding: 50px 0 0 0;
       }
+
       .slick-dots {
         right: calc(50% + 60px);
         top: 0;
         flex-direction: row;
       }
+
       .text-wrapper {
         padding: 0;
       }
+
       .sl1-item p {
         font-size: 12px;
       }
+
       .img-wrapper {
         display: flex;
+
         img {
           margin: auto 0;
         }
       }
     }
+
     .plans {
       margin-bottom: 150px;
+
       h2 {
         font-size: 30px;
       }
+
       &-items {
         & > div h3 {
           padding: 20px;
-        }
-        .slick-list {
-          padding: 0 !important;
         }
       }
     }
@@ -107,11 +122,14 @@
     .img-wrapper {
       min-width: 70vw;
     }
+
     .text-wrapper {
       font-size: 16px;
     }
+
     .slick-slide {
       width: 60px;
+
       img {
         width: 100%;
       }
@@ -119,12 +137,15 @@
   }
   .more-question {
     grid-template-rows: 1fr 1fr;
+
     .text-wrapper {
       width: 80vw;
       margin: 0 auto;
+
       h3 {
         font-size: 24px;
       }
+
       p {
         font-size: 12px;
       }
@@ -135,29 +156,37 @@
     hr.container {
       max-width: 100%;
     }
+
     .container.top {
       width: 100%;
       margin: 0;
     }
+
     .top {
       grid-template-columns: auto;
       grid-template-rows: repeat(2, auto);
+
       nav {
         padding: 0 0 0 10px;
         text-align: left;
         width: 100vw;
+
         li {
           padding-left: 20px;
         }
       }
+
       .contacts-wrapper {
         margin-top: 20px;
       }
+
       .contacts-line {
         grid-template-rows: repeat(4, auto);
         grid-template-columns: 1fr;
+
         p {
           padding-left: 20px;
+
           &:nth-of-type(3) {
             max-width: 270px;
             font-size: 12px;
@@ -165,23 +194,29 @@
           }
         }
       }
+
       .map {
         text-align: left;
       }
     }
+
     .bottom {
       flex-direction: column;
       justify-content: center;
+
       .footer-logo {
         width: 50%;
         margin: 10px auto;
+
         img {
           width: 100%;
         }
       }
+
       .social {
         display: flex;
         align-self: unset;
+
         a {
           display: block;
           margin: 0 auto;

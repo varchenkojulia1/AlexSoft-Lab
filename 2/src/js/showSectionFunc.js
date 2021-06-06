@@ -1,7 +1,7 @@
 export const showSectionFunc = () => {
   const sections = document.querySelectorAll("main > section"),
-    breakpointsDesktop = [600, 1200, 2100, 3200, 3500, 3800],
-    breakpointsTablet = [300, 1200, 1900, 3100, 3700, 4500];
+    breakpointsDesktop = [600, 1200, 2000, 3000, 3500, 3800],
+    breakpointsTablet = [300, 1200, 1900, 3100, 3700, 4100];
   let currentBreakpoints =
     window.innerWidth <= 1024 ? breakpointsTablet : breakpointsDesktop;
 
