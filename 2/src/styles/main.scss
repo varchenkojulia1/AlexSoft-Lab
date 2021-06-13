@@ -2,11 +2,11 @@
 @import "~slick-carousel/slick/slick";
 @import "~slick-carousel/slick/slick-theme";
 
+@import "mixins";
 @import "variables";
 @import "base";
-@import "layout";
 @import "general";
-
+@import "layout";
 @import "header";
 @import "heading";
 @import "secutity-alert";
@@ -16,6 +16,6 @@
 @import "more_questions";
 @import "action-box";
 @import "footer";
-
-@import "media-tablet";
-@import "media-mobile";
+//
+//@import "media-tablet";
+//@import "media-mobile";

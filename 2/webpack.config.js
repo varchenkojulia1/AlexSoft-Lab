@@ -11,21 +11,6 @@ const PrettierPlugin = require("prettier-webpack-plugin");
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-// const cssLoaders = (extra) => {
-//     const loaders = [
-//         {
-//             options: {
-//                 hmr: isDev,
-//                 reloadAll: true
-//             }
-//         },
-//         'css-loader'
-//     ]
-//     if(extra) {
-//         loaders.push(extra)
-//     }
-//     return loaders
-// }
 
 const optimization = () => {
     const config = {

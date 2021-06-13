@@ -1,12 +1,19 @@
 .cybersecurity {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(2, max(500px));
-    grid-template-rows: repeat(2, min(200px));
-    margin-left: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
     gap: 40px;
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  .title-middle {
+    font-size: 32px;
   }
 
   .img-wrapper {
@@ -19,6 +26,7 @@
     box-shadow: 0 12px 24px rgba(127, 127, 127, 0.3);
     display: grid;
     grid-template-columns: 1fr auto;
+
     &:hover {
       .img-wrapper {
         animation-name: rotate;
@@ -26,23 +34,35 @@
         animation-iteration-count: 1;
       }
     }
-    .img-wrapper {
-      margin: 0 20px;
-    }
-    .img-wrapper,
-    .text-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+  }
 
-    .text-wrapper {
+  .img-wrapper {
+    margin: 0 20px;
+  }
+
+  .img-wrapper,
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-wrapper {
+    margin-left: 20px;
+    @include desktop {
       margin-left: 50px;
+      padding: 20px 0;
+      font-size: 13px;
+    }
 
-      h4 {
-        font-size: 24px;
-        padding-bottom: 16px;
-      }
+    .title-xs {
+      font-size: 16px;
+      padding: 16px 0;
+    }
+
+    .text {
+      font-size: 12px;
+      padding-bottom: 20px;
     }
   }
 
@@ -50,11 +70,13 @@
     padding-top: 40px;
     display: flex;
     justify-content: center;
+
     .btn {
       padding: 10px 50px;
     }
   }
 }
+
 @keyframes rotate {
   50% {
     transform: rotate(360deg);

@@ -23,7 +23,7 @@ $(document).ready(function () {
   plansContainerCarousel();
 
   window.addEventListener("resize", plansContainerCarousel);
-  window.addEventListener("resize", componentSlider);
+  // window.addEventListener("resize", componentSlider);
 
   $("#hamburger").on("click", showMenuToggle);
   $(document).on("scroll", scrollFunc);

@@ -1,6 +1,7 @@
 .container {
   max-width: 1160px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .container-fluid {
   width: 100%;
@@ -8,4 +9,25 @@
 .container-sm {
   max-width: 900px;
   margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+@include desktop {
+  .d-lg-block {
+    display: block;
+  }
+  .d-lg-none {
+    display: none;
+  }
+  .d-lg-flex {
+    display: flex;
+  }
 }

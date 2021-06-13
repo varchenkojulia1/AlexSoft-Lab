@@ -6,10 +6,19 @@ export const plansContainerCarousel = () => {
     dots: false,
     slidesToShow: 1,
     infinite: false,
+    autoplay: true,
+    autoplaySpeed: 10000,
     responsive: [
       {
-        breakpoint: 1025,
+        breakpoint: 1325,
         settings: "unslick",
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false,
+        },
       },
       {
         breakpoint: 767,

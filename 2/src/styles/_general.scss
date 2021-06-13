@@ -1,4 +1,5 @@
-main > section {
+main > section,
+section > div {
   transition: 1s;
 }
 
@@ -38,7 +39,15 @@ main > section {
   }
 }
 
-h2 {
+.title-middle {
   font-family: Aclonica, sans-serif;
   font-size: 42px;
+}
+
+.is-transparent {
+  opacity: 0;
+}
+
+.img-wrapper img {
+  width: 100%;
 }
