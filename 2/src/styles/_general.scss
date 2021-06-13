@@ -1,0 +1,53 @@
+main > section,
+section > div {
+  transition: 1s;
+}
+
+.btn {
+  display: block;
+  padding: 10px 30px;
+
+  border-radius: 20px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+
+  &-light {
+    background: transparent;
+    color: $accent;
+    border: 1px solid white;
+
+    &:hover {
+      background: $accent;
+      color: white;
+      border-color: transparent;
+    }
+  }
+
+  &-dark {
+    background: $accent;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: $btnShadow;
+
+    &:hover {
+      background: transparent;
+      color: $accent;
+      border-color: $accent;
+      box-shadow: $btnHoverShadow;
+    }
+  }
+}
+
+.title-middle {
+  font-family: Aclonica, sans-serif;
+  font-size: 42px;
+}
+
+.is-transparent {
+  opacity: 0;
+}
+
+.img-wrapper img {
+  width: 100%;
+}

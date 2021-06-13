@@ -1,0 +1,109 @@
+.heading {
+  background: linear-gradient(
+    to right top,
+    $gradientColor1 50%,
+    $gradientColor2 60%
+  );
+  text-align: center;
+  z-index: 1;
+  color: white;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+  .container {
+    padding: 110px 20px 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+      justify-content: space-around;
+    }
+    @include desktop {
+      gap: 100px;
+    }
+  }
+  &-text-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 40px;
+    padding-bottom: 80px;
+    @include tablet {
+      gap: 100px;
+      padding-bottom: 0;
+    }
+    @include desktop {
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(2, auto);
+    }
+
+    .paragraph {
+      text-align: left;
+      position: relative;
+      padding-left: 30px;
+      font-size: 20px;
+      line-height: 26px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 180px;
+        left: 0;
+        background: white;
+      }
+    }
+  }
+
+  .title-big {
+    font-size: 40px;
+    letter-spacing: 1px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Actor", sans-serif;
+    @include tablet {
+      font-size: 60px;
+    }
+    @include desktop {
+      font-size: 110px;
+    }
+  }
+
+  @include tablet {
+    .container-sm {
+      max-width: 700px;
+    }
+    .heading-text-wrapper p::before {
+      height: 100px;
+    }
+  }
+  @include desktop {
+    .container-sm {
+      max-width: 900px;
+    }
+  }
+  .btn-wrapper {
+    align-self: center;
+  }
+
+  .btn {
+    border: 1px solid white;
+    color: $gradientColor1;
+    background: white;
+    box-shadow: $btnShadow;
+    margin: 0 auto;
+
+    @include desktop {
+      padding: 10px 60px;
+    }
+
+    &:hover {
+      background: transparent;
+      color: white;
+      box-shadow: $btnHoverShadow;
+    }
+  }
+}

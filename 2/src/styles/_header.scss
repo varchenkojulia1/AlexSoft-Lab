@@ -1,0 +1,197 @@
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include desktop {
+    .logo {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      a {
+        display: block;
+      }
+
+      & + div {
+        flex-grow: 2;
+      }
+    }
+  }
+
+  .header-menu {
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    height: calc(100vh - 70px);
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background: white;
+    @include tablet {
+      height: 50vh;
+    }
+    @include desktop {
+      position: static;
+      background: transparent;
+      flex-direction: row;
+      padding: 0;
+      height: unset;
+      gap: 20px;
+    }
+
+    ul {
+      flex-direction: column;
+      @include desktop {
+        flex-direction: row;
+        flex-grow: 2;
+        justify-content: space-between;
+      }
+
+      & + div {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        @include desktop {
+          flex-direction: row;
+          margin: 0;
+          flex-grow: 1;
+          justify-content: space-around;
+        }
+
+        .btn + .btn {
+          margin-top: 20px;
+          @include desktop {
+            margin: 0;
+          }
+        }
+      }
+
+      li {
+        padding: 20px 0;
+        position: relative;
+      }
+    }
+
+    a,
+    .btn {
+      color: $accent;
+      @include desktop {
+        color: white;
+      }
+    }
+
+    .btn {
+      border-color: $accent;
+      @include desktop {
+        border-color: white;
+      }
+    }
+  }
+
+  .header-menu .active {
+    &::after {
+      content: "";
+      width: 40px;
+      height: 1.5px;
+      background: $accent;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 20px);
+      @include desktop {
+        background: white;
+      }
+    }
+  }
+
+  li:hover {
+    &::after {
+      content: "";
+      width: 40px;
+      height: 1.5px;
+      background: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 20px);
+    }
+  }
+}
+
+.hamburger,
+.cross {
+  width: 40px;
+  height: 40px;
+
+  .line {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 6px 0;
+  }
+}
+
+.cross {
+  position: relative;
+
+  .line:first-of-type {
+    display: none;
+  }
+
+  .line:not(:first-of-type) {
+    position: absolute;
+    top: 10px;
+  }
+
+  .line:nth-of-type(2) {
+    transform: rotate(45deg);
+  }
+
+  .line:nth-of-type(3) {
+    transform: rotate(-45deg);
+  }
+}
+
+.gray-header {
+  background: white;
+
+  a,
+  .btn {
+    color: $mainColor !important;
+    border-color: $mainColor !important;
+  }
+
+  .btn:hover {
+    color: white !important;
+    border-color: transparent !important;
+  }
+
+  svg path {
+    fill: $mainColor;
+  }
+
+  ul {
+    li.active::after {
+      background: $mainColor;
+    }
+  }
+
+  li:hover::after {
+    background: $lightMain;
+  }
+
+  .hamburger,
+  .cross {
+    div {
+      background-color: $mainColor;
+    }
+  }
+}
