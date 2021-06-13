@@ -1,0 +1,16 @@
+{
+  "name": "1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yuliia Varchenko",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-prettier": "^3.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^6.0.0"
+  }
+}
